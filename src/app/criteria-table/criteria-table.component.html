@@ -1,0 +1,35 @@
+<div *ngFor="let topic of Rules">
+  <h2>
+    {{topic.topic}}
+  </h2>
+  <table>
+    <thead>
+      <th>Referências</th>
+      <th>Critério</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let criteria of topic.criterias">
+        <td>{{referencesToStr(criteria)}}</td>
+        <td>{{criteria.criteria_id}}. {{criteria.criteria_title}}</td>
+        <table>
+          <thead>
+            <th>O que inclui</th>
+            <th>Verificação</th>
+            <th>Obs</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let subcriteria of criteria.subcriterias">
+              <td>{{criteria.criteria_id}}.{{subcriteria.subcriteria_id}} {{subcriteria.subcriteria_title}}</td>
+              <td>
+                <input type="checkbox">
+              </td>
+              <td>
+                <input type="text">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+    </tbody>
+  </table>
+</div>
