@@ -1,84 +1,92 @@
 <div class="container">
-  <div *ngFor="let topic of Rules; let topicId = index" class="container">
-    <h2>
-      {{topic.topic}}
-    </h2>
-    <div class="accordion" id="accordion{{topicId}}">
-      <div *ngFor="let criteria of topic.criterias; let i = index" class="accordion-item">
-        <h4 class="accordion-header" id="accordion{{topicId}}-heading{{i}}">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#accordion{{topicId}}-collapse{{i}}" attr.aria-expanded="true" attr.aria-controls="accordion{{topicId}}-collapse{{i}}">
-            Critério {{i + 1}}. {{criteria.criteria_title}}
-          </button>
-        </h4>
+  <app-criteria-filter></app-criteria-filter>
+  <div *ngFor="let topic of rules; let topicId = index" class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#topic{{topicId}}-collapse" attr.aria-expanded="true" attr.aria-controls="topic{{topicId}}-collapse">
+        <h2 lass="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#topic{{topicId}}-collapse" attr.aria-expanded="true" attr.aria-controls="topic{{topicId}}-collapse">
+          {{topic.topic}}
+        </h2>
+      </button>
+    </div>
+    <div id="topic{{topicId}}-collapse" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading">
+      <div class="accordion-body">
+        <div class="accordion my-2" id="accordion{{topicId}}">
+          <div *ngFor="let criteria of topic.criterias; let i = index" class="accordion-item">
+            <h4 class="accordion-header" id="accordion{{topicId}}-heading{{i}}">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#accordion{{topicId}}-collapse{{i}}" attr.aria-expanded="true" attr.aria-controls="accordion{{topicId}}-collapse{{i}}">
+                Critério {{i + 1}}. {{criteria.criteria_title}}
+              </button>
+            </h4>
 
-        <div id="accordion{{topicId}}-collapse{{i}}" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading{{i}}">
-          <div class="accordion-body">
-            <h5>O que inclui</h5>
-            <div class="row my-2" *ngFor="let subcriteria of criteria.subcriterias; let j =index">
-              <div class="col col-4">
-                <h6>{{i + 1}}.{{j + 1}} {{subcriteria.subcriteria_title}}</h6>
-              </div>
-              <div class="col col-8">
-                <p>Verificação</p>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="verificationRating_{{i+1}}_{{j+1}}"
-                    id="verificationRating_{{i+1}}_{{j+1}}0"
-                    value="0"
-                  >
-                  <label
-                    class="form-check-label"
-                    for="verificationRating_{{i+1}}_{{j+1}}0"
-                  >
-                    Não encontrei
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="verificationRating_{{i+1}}_{{j+1}}"
-                    id="verificationRating_{{i+1}}_{{j+1}}1"
-                    value="1"
-                  >
-                  <label
-                    class="form-check-label"
-                    for="verificationRating_{{i+1}}_{{j+1}}1"
-                  >
-                    Achei facilmente
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="verificationRating_{{i+1}}_{{j+1}}"
-                    id="verificationRating_{{i+1}}_{{j+1}}2"
-                    value="2"
-                  >
-                  <label
-                    class="form-check-label"
-                    for="verificationRating_{{i+1}}_{{j+1}}2"
-                  >
-                    Média dificuldade
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="verificationRating_{{i+1}}_{{j+1}}"
-                    id="verificationRating_{{i+1}}_{{j+1}}3"
-                    value="3"
-                  >
-                  <label
-                    class="form-check-label"
-                    for="verificationRating_{{i+1}}_{{j+1}}3"
-                  >
-                    Muita dificuldade
-                  </label>
+            <div id="accordion{{topicId}}-collapse{{i}}" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading{{i}}">
+              <div class="accordion-body">
+                <h5>O que inclui</h5>
+                <div class="row my-4" *ngFor="let subcriteria of criteria.subcriterias; let j =index">
+                  <div class="col col-4">
+                    <h6>{{i + 1}}.{{j + 1}} {{subcriteria.subcriteria_title}}</h6>
+                  </div>
+                  <div class="col col-8">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="verificationRating_{{i+1}}_{{j+1}}"
+                        id="verificationRating_{{i+1}}_{{j+1}}0"
+                        value="0"
+                      >
+                      <label
+                        class="form-check-label"
+                        for="verificationRating_{{i+1}}_{{j+1}}0"
+                      >
+                        Não encontrei
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="verificationRating_{{i+1}}_{{j+1}}"
+                        id="verificationRating_{{i+1}}_{{j+1}}1"
+                        value="1"
+                      >
+                      <label
+                        class="form-check-label"
+                        for="verificationRating_{{i+1}}_{{j+1}}1"
+                      >
+                        Encontrei facilmente
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="verificationRating_{{i+1}}_{{j+1}}"
+                        id="verificationRating_{{i+1}}_{{j+1}}2"
+                        value="2"
+                      >
+                      <label
+                        class="form-check-label"
+                        for="verificationRating_{{i+1}}_{{j+1}}2"
+                      >
+                        Encontrei com dificuldade
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="verificationRating_{{i+1}}_{{j+1}}"
+                        id="verificationRating_{{i+1}}_{{j+1}}3"
+                        value="3"
+                      >
+                      <label
+                        class="form-check-label"
+                        for="verificationRating_{{i+1}}_{{j+1}}3"
+                      >
+                      Tive muita dificuldade
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

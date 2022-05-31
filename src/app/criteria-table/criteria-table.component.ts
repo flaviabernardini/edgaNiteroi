@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Topic, Criteria, SubCriteria } from '../models/rules.models';
+import { Topic, Criteria } from '../models/rules.models';
 import Rules from "src/rules.json";
 
 @Component({
@@ -8,7 +8,7 @@ import Rules from "src/rules.json";
   styleUrls: ['./criteria-table.component.scss']
 })
 export class CriteriaTableComponent implements OnInit {
-  Rules: Topic[] = Rules as Topic[];
+  rules: Topic[] = Rules as Topic[];
   constructor() { }
 
   ngOnInit(): void {
