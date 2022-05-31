@@ -2,10 +2,21 @@
 
 </head>
 <body>
-  <header>
-    <div class="nav"></div>
-  </header>
-  <main>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/img/search.png" alt="Ícone de lupa com símbolo de acerto" height="24" class="d-inline-block align-text-top">
+        Checklist Transparência
+      </a>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <body>
     <app-criteria-table></app-criteria-table>
-  </main>
+  </body>
 </body>
