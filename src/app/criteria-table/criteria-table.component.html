@@ -32,6 +32,7 @@
                         type="radio"
                         name="verificationRating_{{i+1}}_{{j+1}}"
                         id="verificationRating_{{i+1}}_{{j+1}}0"
+                        [disabled]="isSubcriteriaDisabled(subcriteria)"
                         value="0"
                       >
                       <label
@@ -47,6 +48,7 @@
                         type="radio"
                         name="verificationRating_{{i+1}}_{{j+1}}"
                         id="verificationRating_{{i+1}}_{{j+1}}1"
+                        [disabled]="isSubcriteriaDisabled(subcriteria)"
                         value="1"
                       >
                       <label
@@ -62,6 +64,7 @@
                         type="radio"
                         name="verificationRating_{{i+1}}_{{j+1}}"
                         id="verificationRating_{{i+1}}_{{j+1}}2"
+                        [disabled]="isSubcriteriaDisabled(subcriteria)"
                         value="2"
                       >
                       <label
@@ -77,6 +80,7 @@
                         type="radio"
                         name="verificationRating_{{i+1}}_{{j+1}}"
                         id="verificationRating_{{i+1}}_{{j+1}}3"
+                        [disabled]="isSubcriteriaDisabled(subcriteria)"
                         value="3"
                       >
                       <label

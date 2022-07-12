@@ -1,3 +1,5 @@
+import { CriteriaReference } from './../models/criteria-reference.models';
+import { RulesService } from './../rules/rules.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./criteria-filter.component.scss']
 })
 export class CriteriaFilterComponent implements OnInit {
-
-  constructor() { }
+  selectedReferences: Map<number, CriteriaReference>;
+  constructor(private rulesService: RulesService) {
+    this.selectedReferences = rulesService.selectedReferences;
+  }
 
   ngOnInit(): void {
   }
 
+  toggleReference = this.rulesService.toggleReference;
 }

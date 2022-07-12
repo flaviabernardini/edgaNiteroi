@@ -1,1216 +1,1444 @@
 [{
   "topic": "Consulta sobre Receitas",
   "criterias": [{
-    "references": [4, 1],
-    "criteria_id": 1,
-    "criteria_title": "Pesquisa sobre Receitas",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Valor previsto"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Valor arrecadado"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Classificação em, no mínimo, categoria e/ou ordem"
-    }]
+      "criteria_id": 1,
+      "criteria_title": "Pesquisa sobre Receitas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Valor previsto",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Valor arrecadado",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Classificação em, no mínimo, categoria e/ou ordem",
+          "references": [4]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 2,
-    "criteria_title": "Data da posição",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Possibilita acompanhar a publicação das receitas em tempo real"
-    }]
+      "criteria_id": 2,
+      "criteria_title": "Data da posição",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Possibilita acompanhar a publicação das receitas em tempo real",
+          "references": [1]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 3,
-    "criteria_title": "Receitas por Unidade Gestora",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Categoria econômica"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Origem"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Espécie"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Rubrica"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Alínea"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Subalínea"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor previsto"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Valor lançado, se for o caso"
-    }, {
-      "subcriteria_id": 9,
-      "subcriteria_title": "Valor arrecadado"
-    }]
+      "criteria_id": 3,
+      "criteria_title": "Receitas por Unidade Gestora",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Categoria econômica",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Origem",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Espécie",
+          "references": [1]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Rubrica",
+          "references": [1]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Alínea",
+          "references": [1]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Subalínea",
+          "references": [1]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor previsto",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Valor lançado, se for o caso",
+          "references": [1, 2, 5]
+      }, {
+          "subcriteria_id": 9,
+          "subcriteria_title": "Valor arrecadado",
+          "references": [1, 2, 5]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 4,
-    "criteria_title": "Receitas Globais",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Categoria econômica"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Origem"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Espécie"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Rubrica"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Alínea"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Subalínea"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor previsto"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Valor lançado, se for o caso"
-    }, {
-      "subcriteria_id": 9,
-      "subcriteria_title": "Valor arrecadado"
-    }]
+      "criteria_id": 4,
+      "criteria_title": "Receitas Globais",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Categoria econômica",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Origem",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Espécie",
+          "references": [2]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Rubrica",
+          "references": [2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Alínea",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Subalínea",
+          "references": [2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor previsto",
+          "references": [2, 1, 5]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Valor lançado, se for o caso",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 9,
+          "subcriteria_title": "Valor arrecadado",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 10,
+          "subcriteria_title": "Recolhimento",
+          "references": [5]
+      }, {
+          "subcriteria_id": 11,
+          "subcriteria_title": "Classificação orçamentária com a especificação da natureza da receita e da fonte de recursos",
+          "references": [5]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 5,
-    "criteria_title": "Natureza da receita",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Apresenta alguma indicação da origem do recurso"
-    }]
+      "criteria_id": 5,
+      "criteria_title": "Natureza da receita",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação da origem do recurso",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 6,
-    "criteria_title": "Execução orçamentária e financeira das receitas por órgão",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Código"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Órgão superior"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Previsão"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Receita"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Percentual realizado"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Receita lançada"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Detalhamento por categoria/ordem"
-    }]
+      "criteria_id": 6,
+      "criteria_title": "Execução orçamentária e financeira das receitas por \"órgão\"",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Código",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Órgão superior",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Previsão",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Receita",
+          "references": [1]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Percentual realizado",
+          "references": [1]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Receita lançada",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Detalhamento por categoria/ordem",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 7,
-    "criteria_title": "Execução orçamentária e financeira das receitas por receita",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Categoria"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Origem"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Previsão"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Receita"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Porcentagem realizadas"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Receita lançada"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Detalhamento por espécie/rubrica"
-    }]
+      "criteria_id": 7,
+      "criteria_title": "Execução orçamentária e financeira das receitas por \"receita\"",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Categoria",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Origem",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Previsão",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Receita",
+          "references": [1]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Porcentagem realizadas",
+          "references": [1]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Receita lançada",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Detalhamento por espécie/rubrica",
+          "references": [1]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 8,
-    "criteria_title": "Portal em gráficos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas"
-    }]
+      "criteria_id": 8,
+      "criteria_title": "Portal em gráficos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 9,
-    "criteria_title": "Download de consultas",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento"
-    }]
+      "criteria_id": 9,
+      "criteria_title": "Download de consultas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento",
+          "references": [1, 2]
+      }]
   }]
 }, {
   "topic": "Consulta sobre Despesas",
   "criterias": [{
-    "references": [1, 4],
-    "criteria_id": 10,
-    "criteria_title": "Consulta sobre Empenhos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Número"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Valor"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Data"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Favorecido"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Descrição/objeto do empenho"
-    }]
+      "criteria_id": 10,
+      "criteria_title": "Consulta sobre Empenhos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Número",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Valor",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Data",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Favorecido",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Descrição/objeto do empenho",
+          "references": [1, 4, 5]
+      }]
   }, {
-    "references": [1, 4],
-    "criteria_id": 11,
-    "criteria_title": "Consulta sobre Pagamentos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Valor"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Data"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Favorecido do empenho"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Empenho de referência"
-    }]
+      "criteria_id": 11,
+      "criteria_title": "Consulta sobre Pagamentos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Valor",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Data",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Favorecido do empenho",
+          "references": [1, 4, 5]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Empenho de referência",
+          "references": [1, 4, 5]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 12,
-    "criteria_title": "Consulta por documento",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Documento (número)"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Código da Unidade Gestora"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Código da Gestão"
-    }]
+      "criteria_id": 12,
+      "criteria_title": "Consulta por documento",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Documento (número)",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Código da Unidade Gestora",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Código da Gestão",
+          "references": [1]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 13,
-    "criteria_title": "Despesas por Órgão",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Nome do órgão"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Classificação orçamentária, especificando a unidade orçamentária, função, subfunção, natureza da despesa e a fonte dos recursos que financiaram o gasto"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Número do processo"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "CNPJ ou CPF e nome do beneficiário"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Modalidade licitatória realizada, bem como à sua dispensa ou inexigibilidade, quando for o caso"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Descrição do bem fornecido ou serviço prestado"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor empenhado"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Valor liquidado"
-    }, {
-      "subcriteria_id": 9,
-      "subcriteria_title": "Valor pago"
-    }]
+      "criteria_id": 13,
+      "criteria_title": "Despesas por Órgão",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Nome do órgão",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Classificação orçamentária, especificando a unidade orçamentária, função, subfunção, natureza da despesa, do programa e da ação e a fonte dos recursos que financiaram o gasto",
+          "references": [1, 2, 5]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Número do processo",
+          "references": [1, 2, 5]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "CNPJ ou CPF e nome do beneficiário",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Modalidade licitatória realizada, bem como à sua dispensa ou inexigibilidade, quando for o caso",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Descrição do bem fornecido ou serviço prestado",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor empenhado",
+          "references": [1, 2, 5]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Valor liquidado",
+          "references": [1, 2, 5]
+      }, {
+          "subcriteria_id": 9,
+          "subcriteria_title": "Valor pago",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 14,
-    "criteria_title": "Despesas por Favorecido",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Nome do órgão"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Classificação orçamentária, especificando a unidade orçamentária, função, subfunção, natureza da despesa e a fonte dos recursos que financiaram o gasto"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Número do processo"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "CNPJ ou CPF e nome do beneficiário"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Modalidade licitatória realizada, bem como à sua dispensa ou inexigibilidade, quando for o caso"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Descrição do bem fornecido ou serviço prestado"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor empenhado"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Valor liquidado"
-    }, {
-      "subcriteria_id": 9,
-      "subcriteria_title": "Valor pago"
-    }]
+      "criteria_id": 14,
+      "criteria_title": "Despesas por Favorecido",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Nome do órgão",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Classificação orçamentária, especificando a unidade orçamentária, função, subfunção, natureza da despesa e a fonte dos recursos que financiaram o gasto",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Número do processo",
+          "references": [1, 2, 5]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "CNPJ ou CPF e nome do beneficiário",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Modalidade licitatória realizada, bem como à sua dispensa ou inexigibilidade, quando for o caso",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Descrição do bem fornecido ou serviço prestado",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor empenhado",
+          "references": [1, 2, 5]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Valor liquidado",
+          "references": [1, 2, 5]
+      }, {
+          "subcriteria_id": 9,
+          "subcriteria_title": "Valor pago",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 15,
-    "criteria_title": "Despesa por Área",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Nome do órgão"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Classificação orçamentária, especificando a unidade orçamentária, função, subfunção, natureza da despesa e a fonte dos recursos que financiaram o gasto"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Número do processo"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "CNPJ ou CPF e nome do beneficiário"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Modalidade licitatória realizada, bem como à sua dispensa ou inexigibilidade, quando for o caso"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Descrição do bem fornecido ou serviço prestado"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor empenhado"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Valor liquidado"
-    }, {
-      "subcriteria_id": 9,
-      "subcriteria_title": "Valor pago"
-    }]
+      "criteria_id": 15,
+      "criteria_title": "Despesa por Área",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Nome do órgão",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Classificação orçamentária, especificando a unidade orçamentária, função, subfunção, natureza da despesa e a fonte dos recursos que financiaram o gasto",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Número do processo",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "CNPJ ou CPF e nome do beneficiário",
+          "references": [2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Modalidade licitatória realizada, bem como à sua dispensa ou inexigibilidade, quando for o caso",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Descrição do bem fornecido ou serviço prestado",
+          "references": [1, 2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor empenhado",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Valor liquidado",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 9,
+          "subcriteria_title": "Valor pago",
+          "references": [2]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 16,
-    "criteria_title": "Dados listados",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Fase da despesa"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Documento gerado o Siafi (com link para o documento)"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Espécie de documento"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Órgão superior"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Órgão/entidade vinculada e unidade gestora"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Favorecido"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor da operação"
-    }]
+      "criteria_id": 16,
+      "criteria_title": "Dados listados",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Fase da despesa",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Documento gerado o Siafi (com link para o documento)",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Espécie de documento",
+          "references": [1]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Órgão superior",
+          "references": [1]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Órgão/entidade vinculada e unidade gestora",
+          "references": [1]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Favorecido",
+          "references": [1]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor da operação",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 17,
-    "criteria_title": "Informações na nota de empenho",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Número do processo"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Bem fornecido ou serviço prestado"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Pessoa física ou jurídica beneficiada"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Detalhes sobre o procedimento licitatório realizado"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Função, subfunção, programa e ação de governo a qual a despesa se refere"
-    }]
+      "criteria_id": 17,
+      "criteria_title": "Informações na nota de empenho",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Número do processo",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Bem fornecido ou serviço prestado",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Pessoa física ou jurídica beneficiada",
+          "references": [1]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Detalhes sobre o procedimento licitatório realizado",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Função, subfunção, programa e ação de governo a qual a despesa se refere",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 18,
-    "criteria_title": "Identificação da pessoa física ou jurídica beneficiária do pagamento",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Nome ou razão social"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "CNPJ da pessoa jurídica integralmente e o CPF da pessoa física, ocultando os três primeiros dígitos e os dois últimos dígitos"
-    }]
+      "criteria_id": 18,
+      "criteria_title": "Identificação da pessoa física ou jurídica beneficiária do pagamento",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Nome ou razão social",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "CNPJ da pessoa jurídica integralmente e o CPF da pessoa física, ocultando os três primeiros dígitos e os dois últimos dígitos",
+          "references": [1, 5]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 19,
-    "criteria_title": "Procedimento licitatório realizado",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Divulgação do procedimento licitatório, bem como, quando for o caso, a sua dispensa ou inexigibilidade com o número do correspondente processo"
-    }]
+      "criteria_id": 19,
+      "criteria_title": "Procedimento licitatório realizado",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Divulgação do procedimento licitatório, bem como, quando for o caso, a sua dispensa ou inexigibilidade com o número do correspondente processo",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Descrição do bem ou serviço adquirido",
+          "references": [5]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 20,
-    "criteria_title": "Consulta de transferências de recursos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Acompanha os valores repassados a governos locais, entidades sem fins lucrativos e  pessoas físicas ou jurídicas"
-    }]
+      "criteria_id": 20,
+      "criteria_title": "Consulta de transferências de recursos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Acompanha os valores repassados a governos locais, entidades sem fins lucrativos e  pessoas físicas ou jurídicas",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 21,
-    "criteria_title": "Consulta de gastos diretos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Acompanha os recursos empregados diretamente pelo Governo Federal com base em tipo de despesa, órgão executor, programa, ação e favorecido"
-    }]
+      "criteria_id": 21,
+      "criteria_title": "Consulta de gastos diretos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Acompanha os recursos empregados diretamente pelo Governo Federal com base em tipo de despesa, órgão executor, programa, ação e favorecido",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 22,
-    "criteria_title": "Consulta temáticas",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Bolsa Família"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Cartão de Pagamentos da Defesa Civil"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Cartão de Pagamentos do Governo Federal (CPGF)"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Diárias"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Garantia Safra"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Pescador Artesanal"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Programa de Erradicação do Trabalho Infantil (PETI)"
-    }]
+      "criteria_id": 22,
+      "criteria_title": "Consulta temáticas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Bolsa Família",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Cartão de Pagamentos da Defesa Civil",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Cartão de Pagamentos do Governo Federal (CPGF)",
+          "references": [1]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Diárias",
+          "references": [1]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Garantia Safra",
+          "references": [1]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Pescador Artesanal",
+          "references": [1]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Programa de Erradicação do Trabalho Infantil (PETI)",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 23,
-    "criteria_title": "Realizar uma consulta rápida",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Consultar por período"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Consultar por fase da despesa (empenho, liquidação ou pagamento)"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Consultar por órgão superior"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Consultar por favorecido"
-    }]
+      "criteria_id": 23,
+      "criteria_title": "Realizar uma consulta rápida",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Consultar por período",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Consultar por fase da despesa (empenho, liquidação ou pagamento)",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Consultar por órgão superior",
+          "references": [1]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Consultar por favorecido",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 24,
-    "criteria_title": "Realizar uma consulta avançada",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Consultar por período"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Consultar por fase da despesa (empenho, liquidação ou pagamento) "
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Consultar por órgão superior"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Consultar por órgão/entidade vinculada"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Consultar por unidade gestora"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Consultar por elemento de despesa (ex: aquisição de móvies, auxílio-transporte, etc)"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Consultar por favorecido"
-    }]
+      "criteria_id": 24,
+      "criteria_title": "Realizar uma consulta avançada",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Consultar por período",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Consultar por fase da despesa (empenho, liquidação ou pagamento)",
+          "references": [1, 5]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Consultar por órgão superior",
+          "references": [1]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Consultar por órgão/entidade vinculada",
+          "references": [1]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Consultar por unidade gestora",
+          "references": [1]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Consultar por elemento de despesa (ex: aquisição de móvies, auxílio-transporte, etc)",
+          "references": [1]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Consultar por favorecido",
+          "references": [1]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 25,
-    "criteria_title": "Portal em gráficos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas"
-    }]
+      "criteria_id": 25,
+      "criteria_title": "Realizar uma consulta por documento",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Consultar pelo documento (número)",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Consultar pelo código da unidade gestora",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Código da gestão",
+          "references": [1]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 27,
-    "criteria_title": "Download de consultas ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento"
-    }]
+      "criteria_id": 26,
+      "criteria_title": "Portal em gráficos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas",
+          "references": [1, 2]
+      }]
+  }, {
+      "criteria_id": 27,
+      "criteria_title": "Download de consultas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento",
+          "references": [1, 2]
+      }]
   }]
-}, {
+},
+{
   "topic": "Consulta sobre Informações Financeiras",
   "criterias": [{
-      "references": [1, 2],
       "criteria_id": 28,
       "criteria_title": "Plano Plurianual (PPA)",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Apresenta alguma indicação do Plano Plurianual"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação do Plano Plurianual",
+          "references": [1, 2]
       }]
-    },
-    {
-      "references": [1, 2],
+  }, {
       "criteria_id": 29,
       "criteria_title": "Lei de Diretrizes Orçamentárias (LDO)",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Apresenta alguma indicação da Lei de Diretrizes Orçamentárias"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação da Lei de Diretrizes Orçamentárias",
+          "references": [1, 2]
       }]
-    },
-    {
-      "references": [1],
+  }, {
       "criteria_id": 30,
       "criteria_title": "Prestação de Contas",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Deve ser acompanhada do parecer prévio do Tribunal de Contas e de versões simplificadas"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Deve ser acompanhada do parecer prévio do Tribunal de Contas e de versões simplificadas",
+          "references": [1]
       }]
-    },
-    {
-      "references": [1],
+  }, {
       "criteria_id": 31,
       "criteria_title": "Relatório Resumido da Execução Orçamentária (RREO)",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Apresenta alguma indicação do Relatório Resumido da Execução Orçamentária"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação do Relatório Resumido da Execução Orçamentária",
+          "references": [1]
       }]
-    },
-    {
-      "references": [1],
+  }, {
       "criteria_id": 32,
       "criteria_title": "Relatório de Gestão Fiscal (RGF)",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Apresenta alguma indicação do Relatório de Gestão Fiscal"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação do Relatório de Gestão Fiscal",
+          "references": [1]
       }]
-    },
-    {
-      "references": [1],
+  }, {
       "criteria_id": 33,
       "criteria_title": "Balanço Anual do Exercício Anterior",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Apresenta alguma indicação do Balanço Anual do Exercício Anterior"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação do Balanço Anual do Exercício Anterior",
+          "references": [1]
       }]
-    },
-    {
-      "references": [2],
+  }, {
       "criteria_id": 34,
-      "criteria_title": "Leis orçamentárias anuais ",
+      "criteria_title": "Leis orçamentárias anuais",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Apresenta alguma indicação das Leis orçamentárias anuais"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação das Leis orçamentárias anuais",
+          "references": [2]
       }]
-    },
-    {
-      "references": [1, 2],
+  }, {
       "criteria_id": 35,
       "criteria_title": "Portal em gráficos",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas",
+          "references": [1, 2]
       }]
-    },
-    {
-      "references": [1, 2],
+  }, {
       "criteria_id": 36,
-      "criteria_title": "Download de consultas ",
+      "criteria_title": "Download de consultas",
       "subcriterias": [{
-        "subcriteria_id": 1,
-        "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento"
+          "subcriteria_id": 1,
+          "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento",
+          "references": [1, 2]
       }]
-    }
-  ]
+  }]
 }, {
   "topic": "Consulta sobre Licitações e Contratos",
   "criterias": [{
-    "references": [4],
-    "criteria_id": 37,
-    "criteria_title": "Consulta sobre Licitações",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Número/ano do edital"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Modalidade de licitação"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Objeto da licitação"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Situação/Status da licitação"
-    }]
+      "criteria_id": 37,
+      "criteria_title": "Consulta sobre Licitações",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Número/ano do edital",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Modalidade de licitação",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Objeto da licitação",
+          "references": [1]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Situação/Status da licitação",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 38,
-    "criteria_title": "Informações concernentes a procedimentos licitatórios",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Resultados"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Todos os contratos celebrados"
-    }]
+      "criteria_id": 38,
+      "criteria_title": "Informações concernentes a procedimentos licitatórios",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Resultados",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": " Todos os contratos celebrados",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 39,
-    "criteria_title": "Resumo dos instrumentos de contrato ou de seus aditivos e as comunicações ratificadas pela autoridade superior"
+      "criteria_id": 39,
+      "criteria_title": "Resumo dos instrumentos de contrato ou de seus aditivos e as comunicações ratificadas pela autoridade superior",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Resumo dos instrumentos de contrato ou de seus aditivos e as comunicações ratificadas pela autoridade superior",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 40,
-    "criteria_title": "Relações Mensais de todas as compras feitas pela Administração direta e indireta",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Identificação do bem comprado"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Preço unitário"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Quantidade adquirida"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Nome do vendedor"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Valor total da operação, podendo ser aglutinadas por itens as compras feitas com dispensa e inexigibilidade de licitação "
-    }]
+      "criteria_id": 40,
+      "criteria_title": "Relações Mensais de todas as compras feitas pela Administração direta e indireta",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Identificação do bem comprado",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Preço unitário",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Quantidade adquirida",
+          "references": [1]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Nome do vendedor",
+          "references": [1]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Valor total da operação, podendo ser aglutinadas por itens as compras feitas com dispensa e inexigibilidade de licitação",
+          "references": [1]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 41,
-    "criteria_title": "Editais",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Modalidade licitatória"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Órgão licitante"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Número do processo"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Objeto da licitação"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Datas e formas de apresentação das propostas"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Download dos editais e retificações"
-    }]
+      "criteria_id": 41,
+      "criteria_title": "Editais",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Modalidade licitatória",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Órgão licitante",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Número do processo",
+          "references": [2]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Objeto da licitação",
+          "references": [2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Datas e formas de apresentação das propostas",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Download dos editais e retificações",
+          "references": [2]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 42,
-    "criteria_title": "Resultados",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Modalidade licitatória"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Órgão licitante"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Número do processo"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Objeto da licitação"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Valor final do certame"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Valor ofertado por cada fornecedor licitante"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Motivo de desclassificação de cada fornecedor desclassificado"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Resultado final da licitação"
-    }]
+      "criteria_id": 42,
+      "criteria_title": "Resultados",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Modalidade licitatória",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Órgão licitante",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Número do processo",
+          "references": [2]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Objeto da licitação",
+          "references": [2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Valor final do certame",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Valor ofertado por cada fornecedor licitante",
+          "references": [2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Motivo de desclassificação de cada fornecedor desclassificado",
+          "references": [2]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Resultado final da licitação",
+          "references": [2]
+      }]
   }, {
-    "references": [2, 4],
-    "criteria_id": 43,
-    "criteria_title": "Contratos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Órgão contratante"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Fornecedor contratado"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Objeto do contrato"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Valor global do contrato"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Download integral do contrato"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Favorecido"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Número/Ano do Contrato"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Vigência"
-    }, {
-      "subcriteria_id": 9,
-      "subcriteria_title": "Licitação de origem"
-    }]
+      "criteria_id": 43,
+      "criteria_title": "Contratos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Órgão contratante",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Fornecedor contratado",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Objeto do contrato",
+          "references": [2]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Valor global do contrato",
+          "references": [2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Download integral do contrato",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Favorecido",
+          "references": [4]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Número/Ano do Contrato",
+          "references": [4]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Vigência",
+          "references": [4]
+      }, {
+          "subcriteria_id": 9,
+          "subcriteria_title": "Licitação de origem",
+          "references": [4]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 44,
-    "criteria_title": "Portal em gráficos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas"
-    }]
+      "criteria_id": 44,
+      "criteria_title": "Portal em gráficos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 45,
-    "criteria_title": "Download de consultas ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento"
-    }]
+      "criteria_id": 45,
+      "criteria_title": "Download de consultas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento",
+          "references": [1, 2]
+      }]
   }]
 }, {
   "topic": "Consulta sobre Servidores",
   "criterias": [{
-    "references": [4],
-    "criteria_id": 46,
-    "criteria_title": "Consulta sobre Servidores públicos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Nome"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Cargo/Função"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Remuneração"
-    }]
+      "criteria_id": 46,
+      "criteria_title": "Consulta sobre Servidores públicos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Nome",
+          "references": [4]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Cargo/Função",
+          "references": [4]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Remuneração",
+          "references": [4]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 47,
-    "criteria_title": "Relação de servidores",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Número de matrícula"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Nome do servidor"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Cargo, emprego ou função desempenhado"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Data de exercício"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Data de vacância"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Tipo de vínculo"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Órgão de exercício"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Carga horária"
-    }]
+      "criteria_id": 47,
+      "criteria_title": "Relação de servidores",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Número de matrícula",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Nome do servidor",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Cargo, emprego ou função desempenhado",
+          "references": [2]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Data de exercício",
+          "references": [2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Data de vacância",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Tipo de vínculo",
+          "references": [2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Órgão de exercício",
+          "references": [2]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Carga horária",
+          "references": [2]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 48,
-    "criteria_title": "Remuneração dos servidores",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Mês da folha de pagamento"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Órgão"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Número de matrícula"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Nome do servidor"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Cargo"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Valor da remuneração bruta (vencimento ou subsídio, gratificações incorporadas, horas extras, auxílios, etc)"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor da remuneração líquida (após os descontos de Imposto de Renda e Previdenciário)"
-    }]
+      "criteria_id": 48,
+      "criteria_title": "Remuneração dos servidores",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Mês da folha de pagamento",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Órgão",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Número de matrícula",
+          "references": [2]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Nome do servidor",
+          "references": [2]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Cargo",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Valor da remuneração bruta (vencimento ou subsídio, gratificações incorporadas, horas extras, auxílios, etc)",
+          "references": [2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor da remuneração líquida (após os descontos de Imposto de Renda e Previdenciário)",
+          "references": [2]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 49,
-    "criteria_title": "Portal em gráficos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas"
-    }]
+      "criteria_id": 49,
+      "criteria_title": "Portal em gráficos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 50,
-    "criteria_title": "Download de consultas ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento"
-    }]
+      "criteria_id": 50,
+      "criteria_title": "Download de consultas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento",
+          "references": [1, 2]
+      }]
   }]
 }, {
   "topic": "Consulta sobre Convênios",
   "criterias": [{
-    "references": [2],
-    "criteria_id": 51,
-    "criteria_title": "Convênios concedidos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Órgão concedente"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Entidade beneficiária"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Data de celebração"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Objeto do convênio"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Nome autoridade responsável convenente"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Nome do responsável do concedente"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor de contrapartida do convenente"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Valor total do convênio"
-    }, {
-      "subcriteria_id": 9,
-      "subcriteria_title": "Data e valor de cada liberação de recursos"
-    }, {
-      "subcriteria_id": 10,
-      "subcriteria_title": "Download integral do termo de convênio"
-    }, {
-      "subcriteria_id": 11,
-      "subcriteria_title": "Download integral das prestações de contas ou tomadas de contas especiais realizadas"
-    }]
+      "criteria_id": 51,
+      "criteria_title": "Convênios concedidos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Órgão concedente",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Entidade beneficiária",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Data de celebração",
+          "references": [2]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Objeto do convênio",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Nome autoridade responsável convenente",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Nome do responsável do concedente",
+          "references": [2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor de contrapartida do convenente",
+          "references": [2]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Valor total do convênio",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 9,
+          "subcriteria_title": "Data e valor de cada liberação de recursos",
+          "references": [2]
+      }, {
+          "subcriteria_id": 10,
+          "subcriteria_title": "Download integral do termo de convênio",
+          "references": [2]
+      }, {
+          "subcriteria_id": 11,
+          "subcriteria_title": "Download integral das prestações de contas ou tomadas de contas especiais realizadas",
+          "references": [2]
+      }, {
+          "subcriteria_id": 12,
+          "subcriteria_title": "CPF/CNPJ do convenente",
+          "references": [5]
+      }, {
+          "subcriteria_id": 13,
+          "subcriteria_title": "Nome do convenente",
+          "references": [5]
+      }, {
+          "subcriteria_id": 14,
+          "subcriteria_title": "Número do processo",
+          "references": [5]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 52,
-    "criteria_title": "Convênios recebidos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Órgão concedente"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Entidade beneficiária"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Data de celebração"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Objeto do convênio"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Nome autoridade responsável convenente"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Nome do responsável do concedente"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Valor de contrapartida do convenente"
-    }, {
-      "subcriteria_id": 8,
-      "subcriteria_title": "Valor total do convênio"
-    }, {
-      "subcriteria_id": 9,
-      "subcriteria_title": "Data e valor de cada liberação de recursos"
-    }, {
-      "subcriteria_id": 10,
-      "subcriteria_title": "Download integral do termo de convênio"
-    }, {
-      "subcriteria_id": 11,
-      "subcriteria_title": "Download integral das prestações de contas ou tomadas de contas especiais realizadas"
-    }, {
-      "subcriteria_id": 12,
-      "subcriteria_title": "Convenente (recebedor de recursos estaduais ou federais)"
-    }]
+      "criteria_id": 52,
+      "criteria_title": "Convênios recebidos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Órgão concedente",
+          "references": [2]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Entidade beneficiária",
+          "references": [2]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Data de celebração",
+          "references": [2]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Objeto do convênio",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Nome autoridade responsável convenente",
+          "references": [2]
+      }, {
+          "subcriteria_id": 6,
+          "subcriteria_title": "Nome do responsável do concedente",
+          "references": [2]
+      }, {
+          "subcriteria_id": 7,
+          "subcriteria_title": "Valor de contrapartida do convenente",
+          "references": [2]
+      }, {
+          "subcriteria_id": 8,
+          "subcriteria_title": "Valor total do convênio",
+          "references": [2, 5]
+      }, {
+          "subcriteria_id": 9,
+          "subcriteria_title": "Data e valor de cada liberação de recursos",
+          "references": [2]
+      }, {
+          "subcriteria_id": 10,
+          "subcriteria_title": "Download integral do termo de convênio",
+          "references": [2]
+      }, {
+          "subcriteria_id": 11,
+          "subcriteria_title": "Download integral das prestações de contas ou tomadas de contas especiais realizadas",
+          "references": [2]
+      }, {
+          "subcriteria_id": 12,
+          "subcriteria_title": "Convenente (recebedor de recursos estaduais ou federais)",
+          "references": [2]
+      }, {
+          "subcriteria_id": 13,
+          "subcriteria_title": "CPF/CNPJ do convenente",
+          "references": [5]
+      }, {
+          "subcriteria_id": 14,
+          "subcriteria_title": "Nome do convenente",
+          "references": [5]
+      }, {
+          "subcriteria_id": 15,
+          "subcriteria_title": "Número do processo",
+          "references": [5]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 53,
-    "criteria_title": "Portal em gráficos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas"
-    }]
+      "criteria_id": 53,
+      "criteria_title": "Portal em gráficos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 54,
-    "criteria_title": "Download de consultas ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento"
-    }]
+      "criteria_id": 54,
+      "criteria_title": "Download de consultas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento",
+          "references": [1, 2]
+      }]
   }]
 }, {
   "topic": "Consulta sobre Diárias",
   "criterias": [{
-    "references": [4],
-    "criteria_id": 55,
-    "criteria_title": "Consulta sobre Diárias",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Nome do beneficiário"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Valores recebidos"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Período"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Destino"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Motivo da viagem"
-    }]
+      "criteria_id": 55,
+      "criteria_title": "Consulta sobre Diárias",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Nome do beneficiário",
+          "references": [4]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Valores recebidos",
+          "references": [4]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Período",
+          "references": [4]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "Destino",
+          "references": [4]
+      }, {
+          "subcriteria_id": 5,
+          "subcriteria_title": "Motivo da viagem",
+          "references": [4]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 56,
-    "criteria_title": "Portal em gráficos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas"
-    }]
+      "criteria_id": 56,
+      "criteria_title": "Portal em gráficos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 57,
-    "criteria_title": "Download de consultas ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento"
-    }]
+      "criteria_id": 57,
+      "criteria_title": "Download de consultas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento",
+          "references": [1, 2]
+      }]
   }]
 }, {
   "topic": "Acompanhamento",
   "criterias": [{
-    "references": [2, 4],
-    "criteria_id": 58,
-    "criteria_title": "Acompanhamento de obras públicas, programas, projetos e ações",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Objeto"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Valor total"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Empresa contratada"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "Data de início"
-    }, {
-      "subcriteria_id": 5,
-      "subcriteria_title": "Data prevista para o término ou prazo de execução"
-    }, {
-      "subcriteria_id": 6,
-      "subcriteria_title": "Valor total já pago ou percentual de execução financeira"
-    }, {
-      "subcriteria_id": 7,
-      "subcriteria_title": "Situação atual da obra"
-    }]
-  }, {
-    "references": [4],
-    "criteria_id": 59,
-    "criteria_title": "Acompanhamento eletrônico do pedido de informação",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Data de registro da solicitação"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Situação da solicitação"
-    }]
-  }, {
-    "references": [2],
-    "criteria_id": 60,
-    "criteria_title": "Resultado de inspeções, auditorias, prestações e tomadas de contas realizadas pelos órgãos de controle interno e externo, incluindo prestações de contas relativas a exercícios anteriores"
-  }, {
-    "references": [4],
-    "criteria_id": 61,
-    "criteria_title": "Relatório estatístico - O ente federado divulga relatório estatítisco contendo a quantidade de pedidos de acesso à informação recebidos, atendidos ou indeferidos? ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Quantidade de pedidos"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Quantidade e/ou percentual de pedidos de informação atendidos"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Quantidade e/ou percentual de pedidos de informações indeferidos"
-    }]
-  }, {
-    "references": [1, 2],
-    "criteria_id": 62,
-    "criteria_title": "Portal em gráficos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas"
-    }]
-  }, {
-    "references": [1, 2],
-    "criteria_id": 63,
-    "criteria_title": "Download de consultas ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento"
-    }]
-  }]
+          "criteria_id": 58,
+          "criteria_title": "Acompanhamento de obras públicas, programas, projetos e ações",
+          "subcriterias": [{
+              "subcriteria_id": 1,
+              "subcriteria_title": "Objeto",
+              "references": [2, 4]
+          }, {
+              "subcriteria_id": 2,
+              "subcriteria_title": "Valor total",
+              "references": [2, 4]
+          }, {
+              "subcriteria_id": 3,
+              "subcriteria_title": "Empresa contratada",
+              "references": [2, 4]
+          }, {
+              "subcriteria_id": 4,
+              "subcriteria_title": "Data de início",
+              "references": [2, 4]
+          }, {
+              "subcriteria_id": 5,
+              "subcriteria_title": "Data prevista para o término ou prazo de execução",
+              "references": [2, 4]
+          }, {
+              "subcriteria_id": 6,
+              "subcriteria_title": "Valor total já pago ou percentual de execução financeira",
+              "references": [2, 4]
+          }, {
+              "subcriteria_id": 7,
+              "subcriteria_title": "Situação atual da obra",
+              "references": [2, 4]
+          }]
+      }, {
+          "criteria_id": 59,
+          "criteria_title": "Acompanhamento eletrônico do pedido de informação",
+          "subcriterias": [{
+              "subcriteria_id": 1,
+              "subcriteria_title": "Data de registro da solicitação",
+              "references": [4]
+          }, {
+              "subcriteria_id": 2,
+              "subcriteria_title": "Situação da solicitação",
+              "references": [4]
+          }]
+      },
+      {
+          "criteria_id": 60,
+          "criteria_title": "Acompanhamento de prestação de contas",
+          "subcriterias": [{
+              "subcriteria_id": 1,
+              "subcriteria_title": "Resultado de inspeções, auditorias, prestações e tomadas de contas realizadas pelos órgãos de controle interno e externo, incluindo prestações de contas relativas a exercícios anteriores",
+              "references": [2]
+          }]
+      }, {
+          "criteria_id": 61,
+          "criteria_title": "Relatório estatístico - O ente federado divulga relatório estatítisco contendo a quantidade de pedidos de acesso à informação recebidos, atendidos ou indeferidos?",
+          "subcriterias": [{
+              "subcriteria_id": 1,
+              "subcriteria_title": "Quantidade de pedidos",
+              "references": [4]
+          }, {
+              "subcriteria_id": 2,
+              "subcriteria_title": "Quantidade e/ou percentual de pedidos de informação atendidos",
+              "references": [4]
+          }, {
+              "subcriteria_id": 3,
+              "subcriteria_title": "Quantidade e/ou percentual de pedidos de informações indeferidos",
+              "references": [4]
+          }]
+      }, {
+          "criteria_id": 62,
+          "criteria_title": "Portal em gráficos",
+          "subcriterias": [{
+              "subcriteria_id": 1,
+              "subcriteria_title": "Informações ilustradas com gráficos em formatos variados, como em barra, setores e tabelas",
+              "references": [1, 2]
+          }]
+      }, {
+          "criteria_id": 63,
+          "criteria_title": "Download de consultas",
+          "subcriterias": [{
+              "subcriteria_id": 1,
+              "subcriteria_title": "Área que disponibiliza as informações das consultas em formato apropriado para download e armazenamento",
+              "references": [1, 2]
+          }]
+      }
+  ]
 }, {
   "topic": "Ajuda e Informações Gerais",
   "criterias": [{
-    "references": [2, 4],
-    "criteria_id": 64,
-    "criteria_title": "Estrutura organizacional",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Endereço das unidades"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Horário de atendimento das unidades"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Contatos (telefones e e-mails) das unidades"
-    }]
+      "criteria_id": 64,
+      "criteria_title": "Estrutura organizacional",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Endereço das unidades",
+          "references": [2, 4]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Horário de atendimento das unidades",
+          "references": [2, 4]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Contatos (telefones e e-mails) das unidades",
+          "references": [2, 4]
+      }]
   }, {
-    "references": [4],
-    "criteria_id": 65,
-    "criteria_title": "Contatos das unidades administrativas",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Endereços"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Telefones"
-    }]
+      "criteria_id": 65,
+      "criteria_title": "Contatos das unidades administrativas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Endereços",
+          "references": [4]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Telefones",
+          "references": [4]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 66,
-    "criteria_title": "Nomes das autoridades",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Apresenta alguma indicação dos nomes das autoridades"
-    }]
+      "criteria_id": 66,
+      "criteria_title": "Nomes das autoridades",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação dos nomes das autoridades",
+          "references": [2]
+      }]
   }, {
-    "references": [4],
-    "criteria_id": 67,
-    "criteria_title": "Informações sobre o SIC físico",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Endereço"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "Telefone"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "Horário de atendimento"
-    }, {
-      "subcriteria_id": 4,
-      "subcriteria_title": "E-mail"
-    }]
+      "criteria_id": 67,
+      "criteria_title": "Informações sobre o SIC físico",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Endereço",
+          "references": [4]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "Telefone",
+          "references": [4]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "Horário de atendimento",
+          "references": [4]
+      }, {
+          "subcriteria_id": 4,
+          "subcriteria_title": "E-mail",
+          "references": [4]
+      }]
   }, {
-    "references": [4],
-    "criteria_id": 68,
-    "criteria_title": "Facilidade de acesso à informação",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Para fazer o pedido de informação de forma eletrônica são feitas exigências que dificultem ou impossibilitem o acesso à informação?  "
-    }]
+      "criteria_id": 68,
+      "criteria_title": "Facilidade de acesso à informação",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Para fazer o pedido de informação de forma eletrônica são feitas exigências que dificultem ou impossibilitem o acesso à informação?",
+          "references": [4]
+      }]
   }, {
-    "references": [1, 2, 3],
-    "criteria_id": 69,
-    "criteria_title": "Seção “Perguntas mais frequentes”",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Apresenta alguma indicação de Pergunta frequentes"
-    }]
+      "criteria_id": 69,
+      "criteria_title": "Seção “Perguntas mais frequentes”",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Apresenta alguma indicação de \"Pergunta frequentes\"",
+          "references": [1, 2, 3]
+      }]
   }, {
-    "references": [1, 2],
-    "criteria_id": 70,
-    "criteria_title": "Ferramenta de busca",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Permitir o acesso à informação de forma objetiva, transparente, clara e em linguagem de fácil compreensão"
-    }]
+      "criteria_id": 70,
+      "criteria_title": "Ferramenta de busca",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Permitir o acesso à informação de forma objetiva, transparente, clara e em linguagem de fácil compreensão",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [1, 3],
-    "criteria_id": 71,
-    "criteria_title": "Seção “Fale Conosco”",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Recomenda-se informar e-mail, endereço e número de telefone para contatos"
-    }]
+      "criteria_id": 71,
+      "criteria_title": "Seção “Fale Conosco”",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Recomenda-se informar e-mail, endereço e número de telefone para contatos",
+          "references": [1, 3]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 72,
-    "criteria_title": "Glossário ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Principais termos e seu respectivo significado"
-    }]
+      "criteria_id": 72,
+      "criteria_title": "Glossário",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Principais termos e seu respectivo significado",
+          "references": [2]
+      }]
   }]
 }, {
   "topic": "Veracidade da Informação",
   "criterias": [{
-    "references": [2, 4],
-    "criteria_id": 73,
-    "criteria_title": "Base de dados abertos",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "O ente federado publica em seu sítio oficial alguma relação das bases de dados abertos do município (catálogo/inventário de dados abertos)"
-    }]
+      "criteria_id": 73,
+      "criteria_title": "Base de dados abertos",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "O ente federado publica em seu sítio oficial alguma relação das bases de dados abertos do município (catálogo/inventário de dados abertos)",
+          "references": [2, 4]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 74,
-    "criteria_title": "Características da informação",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Garantir a autenticidade e a integridade das informações disponíveis para acesso"
-    }]
+      "criteria_id": 74,
+      "criteria_title": "Características da informação",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Garantir a autenticidade e a integridade das informações disponíveis para acesso",
+          "references": [1]
+      }]
   }]
 }, {
   "topic": "Interoperabilidade",
   "criterias": [{
-    "references": [1, 2],
-    "criteria_id": 75,
-    "criteria_title": "Acesso livre",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Não pode haver exigências de cadastramento de usuários ou utilização de senhas para acesso "
-    }]
+      "criteria_id": 75,
+      "criteria_title": "Acesso livre",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Não pode haver exigências de cadastramento de usuários ou utilização de senhas para acesso",
+          "references": [1, 2]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 76,
-    "criteria_title": "Acesso por outros sistemas",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Possibilitar o acesso automatizado por sistemas externos em formatos abertos, estruturados e legíveis por máquina"
-    }]
+      "criteria_id": 76,
+      "criteria_title": "Acesso por outros sistemas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Possibilitar o acesso automatizado por sistemas externos em formatos abertos, estruturados e legíveis por máquina",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 77,
-    "criteria_title": "Utilização do e-Ping ",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Requisito de uso de padrões de interoperabilidade e formatos abertos "
-    }]
+      "criteria_id": 77,
+      "criteria_title": "Utilização do e-Ping",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Requisito de uso de padrões de interoperabilidade e formatos abertos",
+          "references": [1]
+      }]
   }]
 }, {
   "topic": "Regulamentação",
   "criterias": [{
-    "references": [4],
-    "criteria_id": 78,
-    "criteria_title": "Regulamentação da LAI",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Se o ente divulga seu normativo de acesso à informação em local de fácil acesso"
-    }]
+      "criteria_id": 78,
+      "criteria_title": "Regulamentação da LAI",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Se o ente divulga seu normativo de acesso à informação em local de fácil acesso",
+          "references": [4]
+      }]
   }, {
-    "references": [2],
-    "criteria_id": 79,
-    "criteria_title": "Relatórios exigidos pela Lei Complementar 101/2000 - Lei de Responsabilidade Fiscal",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Se o ente divulga relatórios resumidos da execução orçamentária que são solicitados pela Lei Complementar 101/2000 - Lei de Responsabilidade Fiscal"
-    }]
+      "criteria_id": 79,
+      "criteria_title": "Relatórios exigidos pela Lei Complementar 101/2000 - Lei de Responsabilidade Fiscal",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Se o ente divulga relatórios resumidos da execução orçamentária que são solicitados pela Lei Complementar 101/2000 - Lei de Responsabilidade Fiscal",
+          "references": [2]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 80,
-    "criteria_title": "Nome do domínio",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Seguir o padrão municipio.uf.gov.br "
-    }]
+      "criteria_id": 80,
+      "criteria_title": "Nome do domínio",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Seguir o padrão municipio.uf.gov.br",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 81,
-    "criteria_title": "Portal pode ser acessado a partir dos sites governamentais",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "www.portaldatransparencia.gov.br"
-    }, {
-      "subcriteria_id": 2,
-      "subcriteria_title": "www.transparencia.gov.br"
-    }, {
-      "subcriteria_id": 3,
-      "subcriteria_title": "www.portaltransparencia.gov.br "
-    }]
+      "criteria_id": 81,
+      "criteria_title": "Portal pode ser acessado a partir dos sites governamentais",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "www.portaldatransparencia.gov.br",
+          "references": [1]
+      }, {
+          "subcriteria_id": 2,
+          "subcriteria_title": "www.transparencia.gov.br",
+          "references": [1]
+      }, {
+          "subcriteria_id": 3,
+          "subcriteria_title": "www.portaltransparencia.gov.br",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 82,
-    "criteria_title": "Cadastro no Contas Públicas",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Verificar se existe registro no www.contaspublicas.gov.br "
-    }]
+      "criteria_id": 82,
+      "criteria_title": "Cadastro no Contas Públicas",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Verificar se existe registro no www.contaspublicas.gov.br",
+          "references": [1]
+      }]
   }, {
-    "references": [1],
-    "criteria_id": 83,
-    "criteria_title": "Nome do link estático para acesso ao portal da transparência do município",
-    "subcriterias": [{
-      "subcriteria_id": 1,
-      "subcriteria_title": "Recomenda-se que o link siga o padrão “Município.uf.gov.br/transparência”. Este link poderá redirecionar a um site externo ao site institucional da prefeitura"
-    }]
+      "criteria_id": 83,
+      "criteria_title": "Nome do link estático para acesso ao portal da transparência do município",
+      "subcriterias": [{
+          "subcriteria_id": 1,
+          "subcriteria_title": "Recomenda-se que o link siga o padrão “Município.uf.gov.br/transparência”. Este link poderá redirecionar a um site externo ao site institucional da prefeitura",
+          "references": [1]
+      }]
   }]
 }]
