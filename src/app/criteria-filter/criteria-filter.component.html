@@ -1,5 +1,13 @@
 <div class="container my-4">
-  <h4>Filtrar</h4>
+  <h4>
+    Filtrar
+    <fa-icon
+      class="fa-solid"
+      [icon]="faCircleInfo"
+      placement="right"
+      data-bs-toggle="tooltip" title="Todos os itens marcados serão utilizados para gerar os critérios a serem avaliados."
+    ></fa-icon>
+  </h4>
   <form action="submit" class="ml-2">
     <div class="form-check" *ngFor="let reference of selectedReferences | keyvalue">
       <input class="form-check-input"

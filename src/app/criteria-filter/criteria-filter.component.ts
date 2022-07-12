@@ -1,6 +1,7 @@
 import { CriteriaReference } from './../models/criteria-reference.models';
 import { RulesService } from './../rules/rules.service';
 import { Component, OnInit } from '@angular/core';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-criteria-filter',
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriteriaFilterComponent implements OnInit {
   selectedReferences: Map<number, CriteriaReference>;
+  faCircleInfo = faCircleInfo;
   constructor(private rulesService: RulesService) {
     this.selectedReferences = rulesService.selectedReferences;
   }
