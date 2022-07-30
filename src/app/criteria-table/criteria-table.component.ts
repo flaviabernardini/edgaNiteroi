@@ -1,9 +1,7 @@
 import { CriteriaReference } from './../models/criteria-reference.models';
 import { RulesService } from './../rules/rules.service';
 import { Component, OnInit } from '@angular/core';
-import { Topic, Criteria, SubCriteria } from '../models/rules.models';
-import allReferences from "src/references.json"
-import Rules from "src/rules.json";
+import { Topic, SubCriteria, SelectedSubCriteria } from '../models/rules.models';
 
 @Component({
   selector: 'app-criteria-table',
@@ -13,11 +11,11 @@ import Rules from "src/rules.json";
 export class CriteriaTableComponent implements OnInit {
   rules: Topic[];
   selectedReferences: Map<number, CriteriaReference>;
+  checkedSubCriterias: Map<[number, number, number], SelectedSubCriteria> = new Map;
 
   constructor(private rulesService: RulesService) {
     this.selectedReferences = rulesService.selectedReferences;
     this.rules = rulesService.rules;
-    console.log(this.selectedReferences);
   }
 
   ngOnInit(): void {

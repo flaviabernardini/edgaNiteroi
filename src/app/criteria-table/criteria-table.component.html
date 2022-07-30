@@ -9,7 +9,7 @@
           </h2>
         </button>
       </div>
-      <div id="topic{{topicId}}-collapse" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading" data-bs-parent="#topics-accordion">
+      <div id="topic{{topicId}}-collapse" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading" attr.data-bs-parent="#topics-accordion">
         <div class="accordion-body">
           <div class="accordion my-2" id="accordion{{topicId}}">
             <div *ngFor="let criteria of topic.criterias; let i = index" class="accordion-item">
@@ -19,10 +19,10 @@
                 </button>
               </h4>
 
-              <div id="accordion{{topicId}}-collapse{{i}}" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading{{i}}">
+              <div id="accordion{{topicId}}-collapse{{i}}" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading{{i}}" attr.data-bs-parent="#accordion{{topicId}}">
                 <div class="accordion-body">
                   <h5>O que inclui</h5>
-                  <div class="row my-4" *ngFor="let subcriteria of criteria.subcriterias; let j =index">
+                  <div class="row my-4" *ngFor="let subcriteria of criteria.subcriterias; let j=index">
                     <div class="col col-4">
                       <h6>{{i + 1}}.{{j + 1}} {{subcriteria.subcriteria_title}}</h6>
                     </div>
@@ -100,5 +100,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="container my-2 mb-5">
+    <button type="button" class="btn btn-primary">Enviar</button>
   </div>
 </div>

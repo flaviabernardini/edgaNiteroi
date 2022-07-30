@@ -4,6 +4,10 @@ export interface SubCriteria {
   subcriteria_title: string;
 }
 
+export interface SelectedSubCriteria extends SubCriteria {
+  rating: number
+}
+
 export interface Criteria {
   criteria_id: number;
   criteria_title: string;
