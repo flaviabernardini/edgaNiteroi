@@ -11,12 +11,12 @@ import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 export class CriteriaFilterComponent implements OnInit {
   selectedReferences: Map<number, CriteriaReference>;
   faCircleInfo = faCircleInfo;
-  constructor(private rulesService: RulesService) {
+  constructor(public rulesService: RulesService) {
     this.selectedReferences = rulesService.selectedReferences;
   }
 
   ngOnInit(): void {
   }
 
-  toggleReference = this.rulesService.toggleReference;
+  ;
 }

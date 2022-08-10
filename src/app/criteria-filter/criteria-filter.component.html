@@ -14,7 +14,7 @@
         type="checkbox"
         id="reference{{reference.value.id}}-checkbox"
         [checked]="reference.value.selected"
-        (change)="toggleReference(reference.key, !reference.value.selected)"
+        (change)="this.rulesService.toggleReference(reference.key, !reference.value.selected)"
       >
       <label class="form-check-label" for="reference{{reference.value.id}}-checkbox">{{reference.value.name}}</label>
     </div>

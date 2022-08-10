@@ -5,7 +5,7 @@ export interface SubCriteria {
 }
 
 export interface SelectedSubCriteria extends SubCriteria {
-  rating: number
+  rating?: number
 }
 
 export interface Criteria {

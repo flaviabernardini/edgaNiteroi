@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { scriptService } from './script.service';
 
-const srcWidget: string = "https://unpkg.com/blip-chat-widget";
+const srcWidget: string = "https://unpkg.com/blip-chat-widget@1.6.*";
 declare let BlipChat: any;
 
 @Component({

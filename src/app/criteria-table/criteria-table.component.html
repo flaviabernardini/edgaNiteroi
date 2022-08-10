@@ -9,7 +9,7 @@
           </h2>
         </button>
       </div>
-      <div id="topic{{topicId}}-collapse" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading" data-bs-parent="#topics-accordion">
+      <div id="topic{{topicId}}-collapse" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading">
         <div class="accordion-body">
           <div class="accordion my-2" id="accordion{{topicId}}">
             <div *ngFor="let criteria of topic.criterias; let i = index" class="accordion-item">
@@ -19,7 +19,7 @@
                 </button>
               </h4>
 
-              <div id="accordion{{topicId}}-collapse{{i}}" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading{{i}}" attr.data-bs-parent="#accordion{{topicId}}">
+              <div id="accordion{{topicId}}-collapse{{i}}" class="accordion-collapse collapse show" attr.aria-labelledby="accordion{{topicId}}-heading{{i}}">
                 <div class="accordion-body">
                   <h5>O que inclui</h5>
                   <div class="row my-4" *ngFor="let subcriteria of criteria.subcriterias; let j=index">
