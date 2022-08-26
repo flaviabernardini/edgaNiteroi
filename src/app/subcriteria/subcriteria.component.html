@@ -1,0 +1,73 @@
+<div class="col col-4">
+  <h6>{{criteriaIndex + 1}}.{{subcriteriaIndex + 1}} {{subcriteria.subcriteria_title}}</h6>
+</div>
+<div class="col col-8">
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}"
+      id="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}0"
+      [disabled]="isSubcriteriaDisabled()"
+      value="0"
+      (change)="selectSubcriteriaRating(0)"
+    >
+    <label
+      class="form-check-label"
+      for="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}0"
+    >
+      Não encontrei
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}"
+      id="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}1"
+      [disabled]="isSubcriteriaDisabled()"
+      value="1"
+      (change)="selectSubcriteriaRating(1)"
+    >
+    <label
+      class="form-check-label"
+      for="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}1"
+    >
+      Encontrei facilmente
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}"
+      id="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}2"
+      [disabled]="isSubcriteriaDisabled()"
+      value="2"
+      (change)="selectSubcriteriaRating(2)"
+    >
+    <label
+      class="form-check-label"
+      for="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}2"
+    >
+      Encontrei com dificuldade
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input
+      class="form-check-input"
+      type="radio"
+      name="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}"
+      id="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}3"
+      [disabled]="isSubcriteriaDisabled()"
+      value="3"
+      (change)="selectSubcriteriaRating(3)"
+    >
+    <label
+      class="form-check-label"
+      for="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}3"
+    >
+    Tive muita dificuldade
+    </label>
+  </div>
+</div>

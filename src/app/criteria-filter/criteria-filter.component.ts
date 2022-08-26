@@ -16,7 +16,5 @@ export class CriteriaFilterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  ;
+  };
 }

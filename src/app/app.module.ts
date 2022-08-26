@@ -5,15 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CriteriaTableComponent } from './criteria-table/criteria-table.component';
 import { CriteriaFilterComponent } from './criteria-filter/criteria-filter.component';
-import { ResultsComponent } from './results/results.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SubcriteriaComponent } from './subcriteria/subcriteria.component';
+import { CriteriaComponent } from './criteria/criteria.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CriteriaTableComponent,
     CriteriaFilterComponent,
-    ResultsComponent
+    SubcriteriaComponent,
+    CriteriaComponent
   ],
   imports: [
     FontAwesomeModule,

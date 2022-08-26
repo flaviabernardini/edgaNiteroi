@@ -11,7 +11,7 @@ export interface SelectedSubCriteria extends SubCriteria {
 export interface Criteria {
   criteria_id: number;
   criteria_title: string;
-  subcriterias: SubCriteria[];
+  subcriterias: SelectedSubCriteria[];
 }
 
 export interface Topic {

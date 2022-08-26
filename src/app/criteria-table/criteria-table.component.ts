@@ -11,20 +11,13 @@ import { Topic, SubCriteria, SelectedSubCriteria } from '../models/rules.models'
 export class CriteriaTableComponent implements OnInit {
   rules: Topic[];
   selectedReferences: Map<number, CriteriaReference>;
-  checkedSubCriterias: Map<[number, number, number], SelectedSubCriteria> = new Map;
 
   constructor(private rulesService: RulesService) {
-    this.selectedReferences = rulesService.selectedReferences;
-    this.rules = rulesService.rules;
+    this.selectedReferences = this.rulesService.selectedReferences;
+    this.rules = this.rulesService.rules;
   }
 
   ngOnInit(): void {
-  }
-
-  isSubcriteriaDisabled(subcriteria: SubCriteria): boolean {
-    return subcriteria.references.every(referenceId =>
-      this.selectedReferences.get(referenceId)?.selected != true
-    )
   }
 
   referencesToStr(subCriteria: SubCriteria) {

@@ -1,0 +1,46 @@
+<div class="accordion my-2" id="accordion{{ topicId }}">
+  <div
+    *ngFor="let criteria of topic.criterias; let i = index"
+    class="accordion-item"
+  >
+    <h4
+      class="accordion-header"
+      id="accordion{{ topicId }}-heading{{ i }}"
+    >
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        attr.data-bs-target="#accordion{{ topicId }}-collapse{{ i }}"
+        aria-expanded="true"
+        attr.aria-controls="accordion{{ topicId }}-collapse{{ i }}"
+      >
+        Critério {{ i + 1 }}. {{ criteria.criteria_title }}
+      </button>
+    </h4>
+
+    <div
+      id="accordion{{ topicId }}-collapse{{ i }}"
+      class="accordion-collapse collapse show"
+      attr.aria-labelledby="accordion{{ topicId }}-heading{{ i }}"
+    >
+      <div class="accordion-body">
+        <h5>O que inclui</h5>
+        <div
+          class="row my-4"
+          *ngFor="
+            let subcriteria of criteria.subcriterias;
+            let j = index
+          "
+        >
+          <app-subcriteria
+            [topicIndex]="topicId"
+            [subcriteria]="subcriteria"
+            [criteriaIndex]="i"
+            [subcriteriaIndex]="j"
+          ></app-subcriteria>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
