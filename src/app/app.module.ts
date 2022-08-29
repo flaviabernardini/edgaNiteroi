@@ -8,6 +8,7 @@ import { CriteriaFilterComponent } from './criteria-filter/criteria-filter.compo
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SubcriteriaComponent } from './subcriteria/subcriteria.component';
 import { CriteriaComponent } from './criteria/criteria.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CriteriaComponent } from './criteria/criteria.component';
   imports: [
     FontAwesomeModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

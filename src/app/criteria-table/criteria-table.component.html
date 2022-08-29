@@ -32,14 +32,26 @@
         attr.aria-labelledby="accordion{{ topicId }}-heading"
       >
         <div class="accordion-body">
-          <app-criteria [topic]="topic" [topicId]="topicId"></app-criteria>
-          <canvas
-            baseChart
-          >
-          </canvas>
-        </div>
+          <div class="row">
+            <div class="col col-9">
+              <app-criteria [topic]="topic" [topicId]="topicId"></app-criteria>
+            </div>
+            <div class="col col-3">
+              <canvas
+                baseChart
+                [type]="'pie'"
+                [datasets]="[{data: generateTopicRating(topic)}]"
+                [labels]="pieChartLabels"
+                [options]="pieChartOptions"
+                [plugins]="pieChartPlugins"
+                [legend]="pieChartLegend"
+              >
+              </canvas>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
   </div>
   <div class="container my-2 mb-5">
     <button type="button" class="btn btn-primary">Enviar</button>

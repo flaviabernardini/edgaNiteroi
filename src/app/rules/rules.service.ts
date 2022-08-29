@@ -32,11 +32,11 @@ export class RulesService {
   }
 
   generateTopicRating(topic: Topic): Array<number> {
-    let ratings = [0,0,0,0]
-    for(const criteria of topic.criterias) {
-      for(const subcriteria of criteria.subcriterias) {
-        if(this.isSubcriteriaDisabled(subcriteria)) {
-          ratings[subcriteria.rating?? 4]++;
+    let ratings = [0, 0, 0, 0, 0];
+    for (const criteria of topic.criterias) {
+      for (const subcriteria of criteria.subcriterias) {
+        if (!this.isSubcriteriaDisabled(subcriteria)) {
+          ratings[subcriteria.rating ?? 4]++;
         }
       }
     }
@@ -44,9 +44,10 @@ export class RulesService {
   }
 
   isSubcriteriaDisabled(subcriteria: SubCriteria): boolean {
-    return subcriteria.references.every(referenceId =>
-      this.selectedReferences.get(referenceId)?.selected != true
-    )
+    return subcriteria.references.every(
+      (referenceId) =>
+        this.selectedReferences.get(referenceId)?.selected != true
+    );
   }
 
   toggleReference(referenceId: number, isSelected: boolean) {
@@ -63,10 +64,9 @@ export class RulesService {
     subcriteriaId: number,
     rating: number
   ) {
-    this.rules[topicId]
-      .criterias[criteriaId]
-      .subcriterias[subcriteriaId]
-      .rating = rating;
+    this.rules[topicId].criterias[criteriaId].subcriterias[
+      subcriteriaId
+    ].rating = rating;
   }
 
   filterTitles(text: string) {
