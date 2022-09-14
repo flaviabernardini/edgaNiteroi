@@ -8,9 +8,10 @@
       type="radio"
       name="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}"
       id="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}0"
+      [value]="0"
+      [(ngModel)]="subcriteria.rating"
       [disabled]="isSubcriteriaDisabled()"
-      value="0"
-      (change)="selectSubcriteriaRating(0)"
+      (change)="saveRules()"
     >
     <label
       class="form-check-label"
@@ -25,9 +26,10 @@
       type="radio"
       name="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}"
       id="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}1"
+      [value]="1"
+      [(ngModel)]="subcriteria.rating"
       [disabled]="isSubcriteriaDisabled()"
-      value="1"
-      (change)="selectSubcriteriaRating(1)"
+      (change)="saveRules()"
     >
     <label
       class="form-check-label"
@@ -42,9 +44,10 @@
       type="radio"
       name="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}"
       id="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}2"
+      [value]="2"
+      [(ngModel)]="subcriteria.rating"
       [disabled]="isSubcriteriaDisabled()"
-      value="2"
-      (change)="selectSubcriteriaRating(2)"
+      (change)="saveRules()"
     >
     <label
       class="form-check-label"
@@ -59,9 +62,10 @@
       type="radio"
       name="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}"
       id="verificationRating_{{criteriaIndex+1}}_{{subcriteriaIndex+1}}3"
+      [value]="3"
+      [(ngModel)]="subcriteria.rating"
       [disabled]="isSubcriteriaDisabled()"
-      value="3"
-      (change)="selectSubcriteriaRating(3)"
+      (change)="saveRules()"
     >
     <label
       class="form-check-label"

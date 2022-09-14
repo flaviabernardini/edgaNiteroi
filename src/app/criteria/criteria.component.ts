@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CriteriaComponent implements OnInit {
   @Input() topic!: Topic;
   @Input() topicId!: number;
+  @Input() topicRating!: Array<number>;
 
   constructor() { }
 

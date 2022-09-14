@@ -1,0 +1,18 @@
+<div class="container">
+  <app-criteria-filter></app-criteria-filter>
+  <div class="accordion" id="topics-accordion">
+    <div
+      *ngFor="let topic of rules; let topicId = index"
+      class="accordion-item"
+    >
+      <app-topic
+        [topic]="topic"
+        [topicId]="topicId"
+        [topicRating]="calculateTopicRating(topic)"
+      ></app-topic>
+    </div>
+  </div>
+  <div class="container my-2 mb-5">
+    <button type="button" class="btn btn-primary">Enviar</button>
+  </div>
+</div>

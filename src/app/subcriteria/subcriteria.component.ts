@@ -15,18 +15,15 @@ export class SubcriteriaComponent implements OnInit {
 
   constructor(private rulesService: RulesService) {}
 
-  ngOnInit(): void {}
-
-  selectSubcriteriaRating(rating: number) {
-    this.rulesService.selectSubcriteriaRating(
-      this.topicIndex,
-      this.criteriaIndex,
-      this.subcriteriaIndex,
-      rating
-    );
+  ngOnInit(): void {
+    console.log(this.subcriteria.rating)
   }
 
   isSubcriteriaDisabled(): boolean {
     return this.rulesService.isSubcriteriaDisabled(this.subcriteria)
+  }
+
+  saveRules(): void {
+    this.rulesService.saveRules();
   }
 }

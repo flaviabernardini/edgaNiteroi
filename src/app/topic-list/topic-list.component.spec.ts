@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CriteriaTableComponent } from './criteria-table.component';
+import { CriteriaTableComponent } from './topic-list.component';
 
 describe('CriteriaTableComponent', () => {
   let component: CriteriaTableComponent;

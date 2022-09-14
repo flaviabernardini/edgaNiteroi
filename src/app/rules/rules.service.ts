@@ -9,7 +9,10 @@ import { Topic } from '../models/rules.models';
   providedIn: 'root',
 })
 export class RulesService {
-  rules: Topic[] = Rules as Topic[];
+  rules: Topic[] = localStorage.getItem('rules') == null?
+    Rules as Topic[]
+    :
+    JSON.parse(localStorage.getItem('rules') as string);
   selectedReferences: Map<number, CriteriaReference> = new Map(
     allReferences.map((item) => [item.id, { ...item, selected: true }])
   );
@@ -31,7 +34,7 @@ export class RulesService {
     return this.rules;
   }
 
-  generateTopicRating(topic: Topic): Array<number> {
+  calculateTopicRating(topic: Topic): Array<number> {
     let ratings = [0, 0, 0, 0, 0];
     for (const criteria of topic.criterias) {
       for (const subcriteria of criteria.subcriterias) {
@@ -67,6 +70,7 @@ export class RulesService {
     this.rules[topicId].criterias[criteriaId].subcriterias[
       subcriteriaId
     ].rating = rating;
+    this.saveRules();
   }
 
   filterTitles(text: string) {
@@ -76,5 +80,18 @@ export class RulesService {
         words.every((word) => criteria.criteria_title.includes(word))
       )
     );
+  }
+
+  saveRules() {
+    localStorage.setItem(
+      'rules',
+      JSON.stringify(this.rules)
+    );
+  }
+
+  loadRules() {
+    this.rules = JSON.parse(
+      localStorage.getItem('rules') as string
+    )
   }
 }
