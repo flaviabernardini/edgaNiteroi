@@ -16,7 +16,7 @@ export class SubcriteriaComponent implements OnInit {
   constructor(private rulesService: RulesService) {}
 
   ngOnInit(): void {
-    console.log(this.subcriteria.rating)
+
   }
 
   isSubcriteriaDisabled(): boolean {

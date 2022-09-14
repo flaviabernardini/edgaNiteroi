@@ -25,14 +25,14 @@
       class="row my-4"
       *ngFor="
         let subcriteria of criteria.subcriterias;
-        let j = index
+        let subcriteriaId = index
       "
     >
       <app-subcriteria
         [topicIndex]="topicId"
         [subcriteria]="subcriteria"
         [criteriaIndex]="criteriaId"
-        [subcriteriaIndex]="j"
+        [subcriteriaIndex]="subcriteriaId"
       ></app-subcriteria>
     </div>
   </div>

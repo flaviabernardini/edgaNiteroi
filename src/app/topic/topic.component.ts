@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 import { Topic } from '../models/rules.models';
-import { RulesService } from '../rules/rules.service';
 
 @Component({
   selector: 'app-topic',
@@ -12,14 +11,18 @@ export class TopicComponent implements OnInit {
   @Input() topic!: Topic;
   @Input() topicId!: number;
   @Input() topicRating!: Array<number>;
+  topicSize: number = 0;
 
-  constructor(private rulesService: RulesService) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  calculateTopicRating(topic: Topic): Array<number> {
-    return this.rulesService.calculateTopicRating(topic);
+    for(const ratings of this.topicRating) {
+      this.topicSize += ratings;
+    }
+    console.log("Topic");
+    console.log(this.topic);
+    console.log(this.topicRating);
+    console.log(this.topicSize);
   }
 
   // Chart
