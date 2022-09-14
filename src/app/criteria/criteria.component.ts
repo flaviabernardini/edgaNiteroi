@@ -1,4 +1,4 @@
-import { Topic } from './../models/rules.models';
+import { Criteria } from './../models/rules.models';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./criteria.component.scss']
 })
 export class CriteriaComponent implements OnInit {
-  @Input() topic!: Topic;
+  @Input() criteria!: Criteria;
   @Input() topicId!: number;
-  @Input() topicRating!: Array<number>;
+  @Input() criteriaId!: number;
 
   constructor() { }
 

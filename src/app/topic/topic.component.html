@@ -20,7 +20,18 @@
   <div class="accordion-body">
     <div class="row">
       <div class="col col-9">
-        <app-criteria [topic]="topic" [topicId]="topicId"></app-criteria>
+        <div class="accordion my-2" id="accordion{{ topicId }}">
+          <div
+            *ngFor="let criteria of topic.criterias; let criteriaId = index"
+            class="accordion-item"
+          >
+            <app-criteria
+              [criteria]="criteria"
+              [topicId]="topicId"
+              [criteriaId]="criteriaId"
+            ></app-criteria>
+          </div>
+        </div>
       </div>
       <div class="col col-3">
         <canvas
