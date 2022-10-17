@@ -1,0 +1,37 @@
+<div>
+  <div *ngFor="let topic of rules">
+    <canvas
+      baseChart
+      [type]="'pie'"
+      [datasets]="[{data: topic.ratings}]"
+      [labels]="pieChartLabels"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend"
+    >
+  </canvas>
+  <div>
+    <div>
+      <h2>Não encontrado</h2>
+    </div>
+
+    <div>
+      <h2>Encontrado facilmente</h2>
+    </div>
+
+
+    <div>
+      <h2>Encontrado com dificuldade</h2>
+    </div>
+
+
+    <div>
+      <h2>Encontrado com muita dificuldade </h2>
+    </div>
+
+    <div>
+      <h2>Não informado</h2>
+    </div>
+  </div>
+  </div>
+</div>

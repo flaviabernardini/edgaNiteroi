@@ -1,9 +1,10 @@
+import { ResultsComponent } from './results/results.component';
+import { TopicListComponent } from './topic-list/topic-list.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CriteriaTableComponent } from './topic-list/topic-list.component';
 import { CriteriaFilterComponent } from './criteria-filter/criteria-filter.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SubcriteriaComponent } from './subcriteria/subcriteria.component';
@@ -15,11 +16,12 @@ import { TopicComponent } from './topic/topic.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CriteriaTableComponent,
-    CriteriaFilterComponent,
-    SubcriteriaComponent,
+    TopicListComponent,
+    TopicComponent,
     CriteriaComponent,
-    TopicComponent
+    SubcriteriaComponent,
+    CriteriaFilterComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ChartOptions } from 'chart.js';
+import { ResultsService } from './results.service';
+import { RulesService } from './../rules/rules.service';
+import { Component, OnInit } from '@angular/core';
 import { Topic } from '../models/rules.models';
+import { ChartOptions } from 'chart.js';
 
 @Component({
-  selector: 'app-topic',
-  templateUrl: './topic.component.html',
-  styleUrls: ['./topic.component.scss']
+  selector: 'app-results',
+  templateUrl: './results.component.html',
+  styleUrls: ['./results.component.scss']
 })
-export class TopicComponent implements OnInit {
-  @Input() topic!: Topic;
-  @Input() topicId!: number;
-  @Input() topicRating!: Array<number>;
-  @Input() topicSize: number = 0;
-
-  constructor() { }
+export class ResultsComponent implements OnInit {
+  rules: Topic[];
+  constructor(
+    private rulesService: RulesService,
+    private resultsService: ResultsService,
+  ) {
+    this.rules = rulesService.rules;
+  }
 
   ngOnInit(): void {
   }

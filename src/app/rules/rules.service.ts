@@ -9,6 +9,7 @@ import { Topic } from '../models/rules.models';
   providedIn: 'root',
 })
 export class RulesService {
+  //TODO salvar as Rules com alterações
   rules: Topic[] = localStorage.getItem('rules') == null?
     Rules as Topic[]
     :
@@ -34,6 +35,11 @@ export class RulesService {
     return this.rules;
   }
 
+  clearRules() {
+    this.rules = Rules as Topic[]
+    localStorage.removeItem('rules');
+  }
+
   calculateTopicRating(topic: Topic): Array<number> {
     let ratings = [0, 0, 0, 0, 0];
     for (const criteria of topic.criterias) {
@@ -44,6 +50,31 @@ export class RulesService {
       }
     }
     return ratings;
+  }
+
+  calculateTopicSize(topic: Topic): number {
+    let size = 0;
+    for (const criteria of topic.criterias) {
+      for (const subcriteria of criteria.subcriterias) {
+        if (!this.isSubcriteriaDisabled(subcriteria)) {
+          size++
+        }
+      }
+    }
+    return size;
+  }
+
+  setTopicRatingsSize(topic: Topic): void {
+    topic.ratings = [0, 0, 0, 0, 0];
+    topic.size = 0;
+    for (const criteria of topic.criterias) {
+      for (const subcriteria of criteria.subcriterias) {
+        if (!this.isSubcriteriaDisabled(subcriteria)) {
+          topic.ratings[subcriteria.rating ?? 4]++;
+          topic.size++;
+        }
+      }
+    }
   }
 
   isSubcriteriaDisabled(subcriteria: SubCriteria): boolean {

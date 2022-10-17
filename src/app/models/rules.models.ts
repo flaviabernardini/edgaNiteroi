@@ -17,4 +17,6 @@ export interface Criteria {
 export interface Topic {
   topic: string;
   criterias: Criteria[];
+  ratings?: Array<number>;
+  size?: number;
 }
