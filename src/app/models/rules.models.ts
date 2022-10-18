@@ -12,6 +12,7 @@ export interface Criteria {
   criteria_id: number;
   criteria_title: string;
   subcriterias: SelectedSubCriteria[];
+  ratings?: Array<number>;
 }
 
 export interface Topic {

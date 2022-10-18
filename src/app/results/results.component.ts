@@ -1,7 +1,7 @@
 import { ResultsService } from './results.service';
 import { RulesService } from './../rules/rules.service';
 import { Component, OnInit } from '@angular/core';
-import { Topic } from '../models/rules.models';
+import { Criteria, Topic } from '../models/rules.models';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -11,19 +11,35 @@ import { ChartOptions } from 'chart.js';
 })
 export class ResultsComponent implements OnInit {
   rules: Topic[];
+
   constructor(
     private rulesService: RulesService,
     private resultsService: ResultsService,
   ) {
     this.rules = rulesService.rules;
+    for(let topic of this.rules) {
+      topic.ratings = rulesService.calculateTopicRating(topic);
+      console.log(topic);
+    }
   }
 
   ngOnInit(): void {
   }
 
+  calculateTopicRating(topic: Topic): Array<number> {
+    return this.rulesService.calculateTopicRating(topic);
+  }
+  calculateCriteriaRating(criteria: Criteria): Array<number> {
+    return this.rulesService.calculateCriteriaRating(criteria);
+  }
+
+  openPDF() {
+    this.resultsService.openPDF();
+  }
+
   // Chart
   public pieChartOptions: ChartOptions<'pie'> = {
-    responsive: true,
+    responsive: false,
     animation: {
       duration: 0,
       onComplete: (animation) => {

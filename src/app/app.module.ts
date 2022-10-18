@@ -12,6 +12,7 @@ import { CriteriaComponent } from './criteria/criteria.component';
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { TopicComponent } from './topic/topic.component';
+import { ResultRatingComponent } from './results/result-rating/result-rating.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TopicComponent } from './topic/topic.component';
     SubcriteriaComponent,
     CriteriaFilterComponent,
     ResultsComponent,
+    ResultRatingComponent,
   ],
   imports: [
     BrowserModule,

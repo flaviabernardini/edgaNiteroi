@@ -1,37 +1,29 @@
-<div>
-  <div *ngFor="let topic of rules">
-    <canvas
-      baseChart
-      [type]="'pie'"
-      [datasets]="[{data: topic.ratings}]"
-      [labels]="pieChartLabels"
-      [options]="pieChartOptions"
-      [plugins]="pieChartPlugins"
-      [legend]="pieChartLegend"
-    >
-  </canvas>
-  <div>
-    <div>
-      <h2>Não encontrado</h2>
-    </div>
-
-    <div>
-      <h2>Encontrado facilmente</h2>
-    </div>
-
-
-    <div>
-      <h2>Encontrado com dificuldade</h2>
-    </div>
-
-
-    <div>
-      <h2>Encontrado com muita dificuldade </h2>
-    </div>
-
-    <div>
-      <h2>Não informado</h2>
+<div id="pdfData">
+  <div class="container mt-2" *ngFor="let topic of rules; let topic_id = index">
+    <h3 class="text-center">
+      {{ topic.topic }}
+    </h3>
+    <div class="row" *ngIf="topic.ratings?.length">
+      <div class="container col col-8">
+        <div *ngFor="let rating of [0,1,2,3,4]">
+          <app-result-rating [topic]="topic" [rating]="rating"></app-result-rating>
+        </div>
+      </div>
+      <div class="chart-container container col col-4">
+        <canvas
+          baseChart
+          [type]="'pie'"
+          [datasets]="[{ data: topic.ratings }]"
+          [labels]="pieChartLabels"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+        >
+        </canvas>
+      </div>
     </div>
   </div>
-  </div>
+</div>
+<div class="container my-3 mb-5">
+  <button type="button" class="btn btn-primary d-block m-auto" (click)="openPDF()">Enviar</button>
 </div>

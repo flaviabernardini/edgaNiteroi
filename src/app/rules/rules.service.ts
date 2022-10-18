@@ -1,4 +1,4 @@
-import { SelectedSubCriteria, SubCriteria } from './../models/rules.models';
+import { Criteria, SelectedSubCriteria, SubCriteria } from './../models/rules.models';
 import { CriteriaReference } from './../models/criteria-reference.models';
 import Rules from 'src/rules.json';
 import allReferences from 'src/references.json';
@@ -10,18 +10,22 @@ import { Topic } from '../models/rules.models';
 })
 export class RulesService {
   //TODO salvar as Rules com alterações
-  rules: Topic[] = localStorage.getItem('rules') == null?
+  fullRules: Topic[] = localStorage.getItem('rules') == null?
     Rules as Topic[]
     :
     JSON.parse(localStorage.getItem('rules') as string);
+
+  rules: Topic[] = [];
   selectedReferences: Map<number, CriteriaReference> = new Map(
     allReferences.map((item) => [item.id, { ...item, selected: true }])
   );
 
-  constructor() {}
+  constructor() {
+    this.updateRules();
+  }
 
   updateRules(): Topic[] {
-    this.rules = Rules.filter((rule) =>
+    this.rules = this.fullRules.filter((rule) =>
       rule.criterias.filter((criteria) =>
         criteria.subcriterias.filter((subcriteria) =>
           subcriteria.references.some(
@@ -36,7 +40,8 @@ export class RulesService {
   }
 
   clearRules() {
-    this.rules = Rules as Topic[]
+    this.fullRules = Rules as Topic[];
+    this.rules = this.fullRules;
     localStorage.removeItem('rules');
   }
 
@@ -47,6 +52,16 @@ export class RulesService {
         if (!this.isSubcriteriaDisabled(subcriteria)) {
           ratings[subcriteria.rating ?? 4]++;
         }
+      }
+    }
+    return ratings;
+  }
+
+  calculateCriteriaRating(criteria: Criteria): Array<number> {
+    let ratings = [0, 0, 0, 0, 0];
+    for (const subcriteria of criteria.subcriterias) {
+      if (!this.isSubcriteriaDisabled(subcriteria)) {
+        ratings[subcriteria.rating ?? 4]++;
       }
     }
     return ratings;
@@ -98,7 +113,7 @@ export class RulesService {
     subcriteriaId: number,
     rating: number
   ) {
-    this.rules[topicId].criterias[criteriaId].subcriterias[
+    this.fullRules[topicId].criterias[criteriaId].subcriterias[
       subcriteriaId
     ].rating = rating;
     this.saveRules();
@@ -116,12 +131,12 @@ export class RulesService {
   saveRules() {
     localStorage.setItem(
       'rules',
-      JSON.stringify(this.rules)
+      JSON.stringify(this.fullRules)
     );
   }
 
   loadRules() {
-    this.rules = JSON.parse(
+    this.fullRules = JSON.parse(
       localStorage.getItem('rules') as string
     )
   }
