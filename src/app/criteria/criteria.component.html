@@ -1,38 +1,59 @@
-<h4
-  class="accordion-header"
-  id="accordion{{ topicId }}-heading{{ criteriaId }}"
->
-  <button
-    class="accordion-button collapsed"
-    type="button"
-    data-bs-toggle="collapse"
-    attr.data-bs-target="#accordion{{ topicId }}-collapse{{ criteriaId }}"
-    aria-expanded="true"
-    attr.aria-controls="accordion{{ topicId }}-collapse{{ criteriaId }}"
+<div>
+  <h4
+    class="accordion-header"
+    id="accordion{{ topicId }}-heading{{ criteriaId }}"
   >
-    Critério {{ criteriaId + 1 }}. {{ criteria.criteria_title }}
-  </button>
-</h4>
-
-<div
-  id="accordion{{ topicId }}-collapse{{ criteriaId }}"
-  class="accordion-collapse collapse"
-  attr.aria-labelledby="accordion{{ topicId }}-heading{{ criteriaId }}"
->
-  <div class="accordion-body">
-    <div
-      class="row my-4"
-      *ngFor="
-        let subcriteria of criteria.subcriterias;
-        let subcriteriaId = index
-      "
+    <button
+      class="accordion-button collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      attr.data-bs-target="#accordion{{ topicId }}-collapse{{ criteriaId }}"
+      aria-expanded="true"
+      attr.aria-controls="accordion{{ topicId }}-collapse{{ criteriaId }}"
     >
-      <app-subcriteria
-        [topicIndex]="topicId"
-        [subcriteria]="subcriteria"
-        [criteriaIndex]="criteriaId"
-        [subcriteriaIndex]="subcriteriaId"
-      ></app-subcriteria>
+      Critério {{ criteriaId + 1 }}. {{ criteria.criteria_title }}
+      <ng-container *ngIf="calculateCriteriaRating(criteria)[4]; then incomplete; else complete;"></ng-container>
+      <ng-template #incomplete>
+        <fa-icon
+        class="fa-solid fa-pull-right"
+        [icon]="faCircle"
+        size="xs"
+        [styles]="{ opacity: '0.8' }"
+        placement="right"
+        ></fa-icon>
+      </ng-template>
+      <ng-template #complete>
+        <fa-icon
+        class="fa-solid fa-pull-right"
+        [icon]="faCheck"
+        size="xs"
+        [styles]="{ opacity: '0.8' }"
+        placement="right"
+        ></fa-icon>
+      </ng-template>
+    </button>
+  </h4>
+
+  <div
+    id="accordion{{ topicId }}-collapse{{ criteriaId }}"
+    class="accordion-collapse collapse"
+    attr.aria-labelledby="accordion{{ topicId }}-heading{{ criteriaId }}"
+  >
+    <div class="accordion-body">
+      <div
+        class="row my-4"
+        *ngFor="
+          let subcriteria of criteria.subcriterias;
+          let subcriteriaId = index
+        "
+      >
+        <app-subcriteria
+          [topicIndex]="topicId"
+          [subcriteria]="subcriteria"
+          [criteriaIndex]="criteriaId"
+          [subcriteriaIndex]="subcriteriaId"
+        ></app-subcriteria>
+      </div>
     </div>
   </div>
 </div>
