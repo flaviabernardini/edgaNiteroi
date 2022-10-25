@@ -1,3 +1,10 @@
-.chart-container {
-  // max-height: 300px;
+.topic-container {
+  page-break-after: always;
+}
+
+.chart-container{
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 400px;
 }

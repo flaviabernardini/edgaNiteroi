@@ -1,8 +1,6 @@
 <div class="container">
   <div>
-    <h2>
-      Lorem Ipsum
-    </h2>
+    <h2>Lorem Ipsum</h2>
   </div>
   <app-criteria-filter></app-criteria-filter>
   <div class="accordion" id="topics-accordion">
@@ -21,12 +19,24 @@
   <div class="row">
     <div class="col col-6">
       <div class="container my-3 mb-5">
-        <button type="button" class="btn btn-primary d-block m-auto" (click)="goTo('results')">Enviar</button>
+        <button
+          type="button"
+          class="btn btn-primary d-block m-auto"
+          (click)="clearForm()"
+        >
+          Limpar
+        </button>
       </div>
     </div>
     <div class="col col-6">
       <div class="container my-3 mb-5">
-        <button type="button" class="btn btn-primary d-block m-auto" (click)="clearForm()">Limpar</button>
+        <button
+          type="button"
+          class="btn btn-primary d-block m-auto btn-success"
+          (click)="goTo('results')"
+        >
+          Enviar
+        </button>
       </div>
     </div>
   </div>

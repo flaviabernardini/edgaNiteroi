@@ -19,7 +19,6 @@ export class ResultsComponent implements OnInit {
     this.rules = rulesService.rules;
     for(let topic of this.rules) {
       topic.ratings = rulesService.calculateTopicRating(topic);
-      console.log(topic);
     }
   }
 
@@ -39,7 +38,7 @@ export class ResultsComponent implements OnInit {
 
   // Chart
   public pieChartOptions: ChartOptions<'pie'> = {
-    responsive: false,
+    responsive: true,
     animation: {
       duration: 0,
       onComplete: (animation) => {

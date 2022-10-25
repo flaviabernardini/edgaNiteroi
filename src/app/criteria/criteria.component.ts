@@ -1,7 +1,7 @@
 import { RulesService } from './../rules/rules.service';
 import { Criteria } from './../models/rules.models';
 import { Component, Input, OnInit } from '@angular/core';
-import { faCircle, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faTriangleExclamation, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-criteria',
@@ -12,7 +12,7 @@ export class CriteriaComponent implements OnInit {
   @Input() criteria!: Criteria;
   @Input() topicId!: number;
   @Input() criteriaId!: number;
-  faCircle = faCircle;
+  faTriangleExclamation = faTriangleExclamation;
   faCheck = faCheck;
 
   constructor(private rulesService: RulesService) { }
