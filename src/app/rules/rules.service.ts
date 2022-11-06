@@ -16,14 +16,23 @@ export class RulesService {
     JSON.parse(localStorage.getItem('rules') as string);
 
   rules: Topic[] = [];
-  selectedReferences: Map<number, CriteriaReference> = new Map(
-    allReferences.map((item) => [item.id, { ...item, selected: true }])
-  );
+  selectedReferences: Map<number, CriteriaReference> = localStorage.getItem('references') == null?
+    new Map(
+      allReferences.map((item) => [item.id, { ...item, selected: true }])
+    )
+    :
+    new Map(
+      JSON.parse(
+        localStorage.getItem('references') as string
+      ).map((item: any) => [item[1].id, { ...item[1]}])
+    )
 
   constructor() {
     this.updateRules();
   }
 
+
+  //-------------------- CRUD
   updateRules(): Topic[] {
     this.rules = this.fullRules.filter((rule) =>
       rule.criterias.filter((criteria) =>
@@ -45,6 +54,57 @@ export class RulesService {
     localStorage.removeItem('rules');
   }
 
+  setTopicRatingsSize(topic: Topic): void {
+    topic.ratings = [0, 0, 0, 0, 0];
+    topic.size = 0;
+    for (const criteria of topic.criterias) {
+      for (const subcriteria of criteria.subcriterias) {
+        if (!this.isSubcriteriaDisabled(subcriteria)) {
+          topic.ratings[subcriteria.rating ?? 4]++;
+          topic.size++;
+        }
+      }
+    }
+  }
+
+  toggleReference(referenceId: number, isSelected: boolean) {
+    if (this.selectedReferences.get(referenceId)) {
+      this.selectedReferences.get(referenceId)!.selected = isSelected;
+    }
+    localStorage.setItem(
+      'references',
+      JSON.stringify(this.selectedReferences)
+    );
+
+    this.updateRules();
+  }
+
+  selectSubcriteriaRating(
+    topicId: number,
+    criteriaId: number,
+    subcriteriaId: number,
+    rating: number
+  ) {
+    this.fullRules[topicId].criterias[criteriaId].subcriterias[
+      subcriteriaId
+    ].rating = rating;
+    this.saveRules();
+  }
+
+  saveRules() {
+    localStorage.setItem(
+      'rules',
+      JSON.stringify(this.fullRules)
+    );
+  }
+
+  loadRules() {
+    this.fullRules = JSON.parse(
+      localStorage.getItem('rules') as string
+    )
+  }
+
+  //-------------------- CALCULATE
   calculateTopicRating(topic: Topic): Array<number> {
     let ratings = [0, 0, 0, 0, 0];
     for (const criteria of topic.criterias) {
@@ -79,19 +139,7 @@ export class RulesService {
     return size;
   }
 
-  setTopicRatingsSize(topic: Topic): void {
-    topic.ratings = [0, 0, 0, 0, 0];
-    topic.size = 0;
-    for (const criteria of topic.criterias) {
-      for (const subcriteria of criteria.subcriterias) {
-        if (!this.isSubcriteriaDisabled(subcriteria)) {
-          topic.ratings[subcriteria.rating ?? 4]++;
-          topic.size++;
-        }
-      }
-    }
-  }
-
+  //-------------------- VERIFY
   isSubcriteriaDisabled(subcriteria: SubCriteria): boolean {
     return subcriteria.references.every(
       (referenceId) =>
@@ -99,24 +147,16 @@ export class RulesService {
     );
   }
 
-  toggleReference(referenceId: number, isSelected: boolean) {
-    if (this.selectedReferences.get(referenceId)) {
-      this.selectedReferences.get(referenceId)!.selected = isSelected;
-    }
-
-    this.updateRules();
+  isCriteriaDisabled(criteria: Criteria): boolean {
+    return criteria.subcriterias.every(
+      (subcriteria) => this.isSubcriteriaDisabled(subcriteria)
+    )
   }
 
-  selectSubcriteriaRating(
-    topicId: number,
-    criteriaId: number,
-    subcriteriaId: number,
-    rating: number
-  ) {
-    this.fullRules[topicId].criterias[criteriaId].subcriterias[
-      subcriteriaId
-    ].rating = rating;
-    this.saveRules();
+  isTopicDisabled(topic: Topic): boolean {
+    return topic.criterias.every(
+      (criteria) => this.isCriteriaDisabled(criteria)
+    )
   }
 
   filterTitles(text: string) {
@@ -126,18 +166,5 @@ export class RulesService {
         words.every((word) => criteria.criteria_title.includes(word))
       )
     );
-  }
-
-  saveRules() {
-    localStorage.setItem(
-      'rules',
-      JSON.stringify(this.fullRules)
-    );
-  }
-
-  loadRules() {
-    this.fullRules = JSON.parse(
-      localStorage.getItem('rules') as string
-    )
   }
 }

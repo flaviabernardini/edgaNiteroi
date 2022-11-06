@@ -1,29 +1,34 @@
 <div id="pdfData">
-  <div class="topic-container container mt-2" *ngFor="let topic of rules; let topic_id = index">
-    <h3 class="text-center">
-      {{ topic.topic }}
-    </h3>
-    <div class="chart-container row">
-      <canvas
-        baseChart
-        [type]="'pie'"
-        [datasets]="[{ data: topic.ratings }]"
-        [labels]="pieChartLabels"
-        [options]="pieChartOptions"
-        [plugins]="pieChartPlugins"
-        [legend]="pieChartLegend"
-      >
-      </canvas>
+  <div *ngFor="let topic of rules">
+    <div class="topic-container container mt-5 mb-2" *ngIf="!isTopicDisabled(topic)">
+      <h3 class="text-center">
+        {{ topic.topic }}
+      </h3>
+      <div class="chart-container row mb-5">
+        <canvas
+          baseChart
+          [type]="'pie'"
+          [datasets]="[{ data: topic.ratings }]"
+          [labels]="pieChartLabels"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+        >
+        </canvas>
+      </div>
     </div>
-    <div *ngIf="topic.ratings?.length">
-      <div class="rating-container row">
-        <div *ngFor="let rating of [0,1,2,3,4]">
-          <app-result-rating [topic]="topic" [rating]="rating"></app-result-rating>
+  </div>
+
+  <div class="container mt-5 mb-2" *ngFor="let topic of rules; let topic_id = index">
+    <div *ngIf="!isTopicDisabled(topic)">
+      <div class="rating-container row pt-3 border border-dark">
+        <div *ngFor="let criteria of topic.criterias">
+          <app-result-rating [topic]="topic" [criteria]="criteria"></app-result-rating>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="container my-3 mb-5">
+
+<div class="print-button-container container my-3 mb-5">
   <button type="button" class="btn btn-primary d-block m-auto" (click)="openPDF()">Imprimir</button>
 </div>

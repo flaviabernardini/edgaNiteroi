@@ -1,7 +1,7 @@
 import { ResultsService } from './results.service';
 import { RulesService } from './../rules/rules.service';
 import { Component, OnInit } from '@angular/core';
-import { Criteria, Topic } from '../models/rules.models';
+import { Criteria, SubCriteria, Topic } from '../models/rules.models';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -25,6 +25,10 @@ export class ResultsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openPDF() {
+    this.resultsService.openPDF();
+  }
+
   calculateTopicRating(topic: Topic): Array<number> {
     return this.rulesService.calculateTopicRating(topic);
   }
@@ -32,8 +36,8 @@ export class ResultsComponent implements OnInit {
     return this.rulesService.calculateCriteriaRating(criteria);
   }
 
-  openPDF() {
-    this.resultsService.openPDF();
+  isTopicDisabled(topic: Topic): boolean {
+    return this.rulesService.isTopicDisabled(topic);
   }
 
   // Chart

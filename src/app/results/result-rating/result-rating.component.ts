@@ -1,5 +1,5 @@
 import { RulesService } from './../../rules/rules.service';
-import { Topic, Criteria } from './../../models/rules.models';
+import { Topic, Criteria, SubCriteria } from './../../models/rules.models';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ResultRatingComponent implements OnInit {
   @Input() topic!: Topic;
-  @Input() rating!: number;
+  @Input() criteria!: Criteria;
 
   ratingLabels = [
     'Não encontrado',
@@ -25,5 +25,13 @@ export class ResultRatingComponent implements OnInit {
 
   calculateCriteriaRating(criteria: Criteria) {
     return this.rulesService.calculateCriteriaRating(criteria);
+  }
+
+  isSubcriteriaDisabled(subcriteria: SubCriteria): boolean {
+    return this.rulesService.isSubcriteriaDisabled(subcriteria);
+  }
+
+  isCriteriaDisabled(criteria: Criteria): boolean {
+    return this.rulesService.isCriteriaDisabled(criteria);
   }
 }

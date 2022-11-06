@@ -1,26 +1,28 @@
-<div class="container my-2" *ngIf="topic.ratings?.[rating]">
-  <div class="row ms-2 mb-2" *ngFor="let criteria of topic.criterias">
-    <div class="col col-3">
-      <h5 class="my-2" *ngIf="calculateCriteriaRating(criteria)[rating]">
-        {{ criteria.criteria_title }}
-      </h5>
-    </div>
-    <div class="col col-9">
-      <div class="ms-2" *ngFor="let subcriteria of criteria.subcriterias">
-        <div
-          class="mb-0 row"
-          *ngIf="
-            subcriteria.rating == rating ||
-            (subcriteria.rating == undefined && rating == 4)
-          "
-        >
-          <div class="col col-8">
-            <p>
-              {{ subcriteria.subcriteria_title }}
-            </p>
-          </div>
-          <div class="col col-4">
-            {{ ratingLabels[rating] }}
+<div class="container py-2">
+  <div *ngFor="let criteria of topic.criterias">
+    <div class="row mb-5" *ngIf="!isCriteriaDisabled(criteria)">
+      <div class="col col-3">
+        <h5>
+          {{ criteria.criteria_title }}
+        </h5>
+      </div>
+      <div class="col col-9">
+        <div *ngFor="let subcriteria of criteria.subcriterias">
+          <div class="mx-2 border-bottom border-dark" *ngIf="!isSubcriteriaDisabled(subcriteria)">
+            <div
+              class="mb-0 row"
+            >
+              <div class="col col-8">
+                <p class="my-1 p-1">
+                  {{ subcriteria.subcriteria_title }}
+                </p>
+              </div>
+              <div class="col col-4">
+                <p class="my-1 py-1">
+                  {{ ratingLabels[subcriteria.rating?? 4] }}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
