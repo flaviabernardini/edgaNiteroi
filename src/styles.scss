@@ -9,36 +9,49 @@
     display: none !important;
   }
 
-  .blip-chat-container {
+  #blip-chat-container {
     display: none !important;
   }
-  #pdf-container {
-    max-width: 100vw;
 
-    #charts {
-      width: 30vw;
+  #pdf-container {
+    max-width: unset !important;
+    margin: 0 !important;
+
+    #page-break {
+      font-size: xx-small;
+      page-break-after: always;
     }
 
-    #topics {
+    #charts {
+      display: block;
+      page-break-after: always;
+    }
+
+    .valid-topic {
+      float: left;
+      width: 50%;
+      overflow: visible;
+      margin-bottom: 40pt;
     }
 
     .chart-container {
-      max-width: 30vw;
-      display: inline-block;
+      display: block;
+      max-width: 300px;
+      margin: auto;
+      page-break-inside: avoid;
+    }
+
+    .chart-canvas {
+      display: block;
+      overflow: visible;
+    }
+
+    #topics {
+      page-break-before: always;
     }
 
     .topic-container {
-
-    }
-
-    .criteria-title {
-      font-size: 12pt;
-    }
-
-    //BOOTSTRAP OVERWRITE
-
-    .mb-5 {
-      margin-bottom: 10pt;
+      page-break-before: always;
     }
   }
 }

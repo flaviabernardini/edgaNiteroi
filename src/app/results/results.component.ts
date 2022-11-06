@@ -50,6 +50,10 @@ export class ResultsComponent implements OnInit {
           duration: 400
         };
       }
+    },
+    plugins: {
+      legend: {
+      }
     }
   };
   public pieChartLabels = [

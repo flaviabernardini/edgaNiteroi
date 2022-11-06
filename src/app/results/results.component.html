@@ -1,11 +1,11 @@
 <div id="pdf-container" class="container">
   <div id="charts">
-    <div *ngFor="let topic of rules" [ngClass]="isTopicDisabled(topic)? 'd-none' : 'd-flex'">
-      <div class="chart-container mb-2" *ngIf="!isTopicDisabled(topic)">
-        <h3 class="text-center">
+    <div *ngFor="let topic of rules" [ngClass]="isTopicDisabled(topic)? 'd-none' : 'valid-topic'">
+      <div class="chart-container" *ngIf="!isTopicDisabled(topic)">
+        <h5 class="text-center">
           {{ topic.topic }}
-        </h3>
-        <div class="mb-5">
+        </h5>
+        <div class="chart-canvas">
           <canvas
             baseChart
             [type]="'pie'"
@@ -20,6 +20,8 @@
       </div>
     </div>
   </div>
+
+  <p id="page-break">Results</p>
 
   <div id="topics">
     <div *ngFor="let topic of rules; let topic_id = index" [ngClass]="{'d-none': isTopicDisabled(topic)}">

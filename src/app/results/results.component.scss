@@ -1,26 +1,35 @@
-#pdf-container {
+@media screen {
 
+  #pdf-container {
+    #page-break {
+      height: 0;
+      page-break-after: always;
+    }
+
+
+    #charts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .valid-topic {
+      display: inline-block;
+      overflow: visible;
+    }
+
+    .chart-container {
+      display: block;
+      max-width: 300px;
+      margin-bottom: 40pt;
+      page-break-inside: avoid;
+    }
+
+    .chart-canvas {
+      display: block;
+      overflow: visible;
+    }
+  }
 }
 
-#charts {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  page-break-after: always;
-}
-
-#topics {
-
-}
-
-.chart-container {
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.topic-container {
-
-}
