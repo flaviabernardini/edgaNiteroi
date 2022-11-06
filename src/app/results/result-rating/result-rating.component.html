@@ -2,7 +2,7 @@
   <div *ngFor="let criteria of topic.criterias">
     <div class="row mb-5" *ngIf="!isCriteriaDisabled(criteria)">
       <div class="col col-3">
-        <h5>
+        <h5 class="criteria-title">
           {{ criteria.criteria_title }}
         </h5>
       </div>
@@ -13,12 +13,12 @@
               class="mb-0 row"
             >
               <div class="col col-8">
-                <p class="my-1 p-1">
+                <p class="subcriteria-title">
                   {{ subcriteria.subcriteria_title }}
                 </p>
               </div>
               <div class="col col-4">
-                <p class="my-1 py-1">
+                <p class="">
                   {{ ratingLabels[subcriteria.rating?? 4] }}
                 </p>
               </div>

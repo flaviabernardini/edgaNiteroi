@@ -1,10 +1,26 @@
-.topic-container {
+#pdf-container {
+
+}
+
+#charts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   page-break-after: always;
 }
 
-.chart-container{
-  display: block;
-  margin: 0 auto;
-  width: 80vw;
+#topics {
+
+}
+
+.chart-container {
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topic-container {
+
 }

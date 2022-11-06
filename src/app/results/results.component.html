@@ -1,29 +1,36 @@
-<div id="pdfData">
-  <div *ngFor="let topic of rules">
-    <div class="topic-container container mt-5 mb-2" *ngIf="!isTopicDisabled(topic)">
-      <h3 class="text-center">
-        {{ topic.topic }}
-      </h3>
-      <div class="chart-container row mb-5">
-        <canvas
-          baseChart
-          [type]="'pie'"
-          [datasets]="[{ data: topic.ratings }]"
-          [labels]="pieChartLabels"
-          [options]="pieChartOptions"
-          [plugins]="pieChartPlugins"
-          [legend]="pieChartLegend"
-        >
-        </canvas>
+<div id="pdf-container" class="container">
+  <div id="charts">
+    <div *ngFor="let topic of rules" [ngClass]="isTopicDisabled(topic)? 'd-none' : 'd-flex'">
+      <div class="chart-container mb-2" *ngIf="!isTopicDisabled(topic)">
+        <h3 class="text-center">
+          {{ topic.topic }}
+        </h3>
+        <div class="mb-5">
+          <canvas
+            baseChart
+            [type]="'pie'"
+            [datasets]="[{ data: topic.ratings }]"
+            [labels]="pieChartLabels"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+            [legend]="pieChartLegend"
+          >
+          </canvas>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container mt-5 mb-2" *ngFor="let topic of rules; let topic_id = index">
-    <div *ngIf="!isTopicDisabled(topic)">
-      <div class="rating-container row pt-3 border border-dark">
-        <div *ngFor="let criteria of topic.criterias">
-          <app-result-rating [topic]="topic" [criteria]="criteria"></app-result-rating>
+  <div id="topics">
+    <div *ngFor="let topic of rules; let topic_id = index" [ngClass]="{'d-none': isTopicDisabled(topic)}">
+      <div class="topic-container my-2" *ngIf="!isTopicDisabled(topic)">
+        <h3 class="text-center">
+          {{ topic.topic }}
+        </h3>
+        <div class="rating-container row pt-3 border border-dark">
+          <div *ngFor="let criteria of topic.criterias">
+            <app-result-rating [topic]="topic" [criteria]="criteria"></app-result-rating>
+          </div>
         </div>
       </div>
     </div>

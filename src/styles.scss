@@ -12,8 +12,33 @@
   .blip-chat-container {
     display: none !important;
   }
+  #pdf-container {
+    max-width: 100vw;
 
-  .topic-container {
-    margin: 0 auto !important;
+    #charts {
+      width: 30vw;
+    }
+
+    #topics {
+    }
+
+    .chart-container {
+      max-width: 30vw;
+      display: inline-block;
+    }
+
+    .topic-container {
+
+    }
+
+    .criteria-title {
+      font-size: 12pt;
+    }
+
+    //BOOTSTRAP OVERWRITE
+
+    .mb-5 {
+      margin-bottom: 10pt;
+    }
   }
 }

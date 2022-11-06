@@ -15,7 +15,7 @@ export class ResultsService {
   }
 
   public openPDF(): void {
-    // let DATA: any = document.getElementsByClassName('pdfData');
+    // let DATA: any = document.getElementsByClassName('pdf-container');
     window.print();
   }
 }
