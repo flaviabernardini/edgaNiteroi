@@ -28,30 +28,16 @@
     }
 
     .valid-topic {
-      float: left;
-      width: 50%;
-      overflow: visible;
       margin-bottom: 40pt;
-    }
-
-    .chart-container {
-      display: block;
-      max-width: 300px;
-      margin: auto;
-      page-break-inside: avoid;
-    }
-
-    .chart-canvas {
-      display: block;
-      overflow: visible;
-    }
-
-    #topics {
-      page-break-before: always;
+      width: 40%;
     }
 
     .topic-container {
+      margin-top: 30px;
+      overflow: visible;
       page-break-before: always;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
     }
   }
 }

@@ -19,6 +19,14 @@ export class ResultRatingComponent implements OnInit {
     'Não informado',
   ];
 
+  ratingColors = [
+    'bg-danger',
+    'bg-primary',
+    'bg-success',
+    'bg-warning',
+    'bg-secondary',
+  ]
+
   constructor(private rulesService: RulesService) {}
 
   ngOnInit(): void {}

@@ -56,7 +56,16 @@
         <canvas
           baseChart
           [type]="'pie'"
-          [datasets]="[{data: topicRating}]"
+          [datasets]="[{
+            data: topicRating,
+            backgroundColor: [
+            'rgb(220, 53, 69, 0.8)',
+            'rgb(13, 110, 253, 0.8)',
+            'rgb(25, 135, 84, 0.8)',
+            'rgb(255, 193, 7, 0.8)',
+            'rgb(108, 117, 125, 0.8)'
+            ]
+          }]"
           [labels]="pieChartLabels"
           [options]="pieChartOptions"
           [plugins]="pieChartPlugins"

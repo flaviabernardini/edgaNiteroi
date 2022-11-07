@@ -1,3 +1,20 @@
 p {
+  height: 100%;
   margin: 0;
+  padding-left: 2px;
+}
+
+.criteria-container {
+  overflow: visible;
+  page-break-inside: avoid;
+  margin-bottom: 40pt;
+}
+
+.criteria-container:last-child {
+  margin-bottom: 20pt;
+}
+
+.subcriteria-container {
+  overflow: visible;
+  page-break-inside: avoid;
 }

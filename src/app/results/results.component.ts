@@ -51,10 +51,6 @@ export class ResultsComponent implements OnInit {
         };
       }
     },
-    plugins: {
-      legend: {
-      }
-    }
   };
   public pieChartLabels = [
     "Não encontrei",

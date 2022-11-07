@@ -1,5 +1,26 @@
-@media screen {
+.valid-topic {
+  display: inline-block;
+  overflow: visible;
+}
 
+.chart-container {
+  display: block;
+  height: 100%;
+  margin-bottom: 40pt;
+  max-width: 300px;
+  page-break-inside: avoid;
+}
+
+.chart-canvas {
+  display: block;
+  overflow: visible;
+}
+
+.topic-container {
+  margin-top: 30px;
+}
+
+@media screen {
   #pdf-container {
     #page-break {
       height: 0;
@@ -14,21 +35,11 @@
       align-content: center;
     }
 
-    .valid-topic {
-      display: inline-block;
-      overflow: visible;
-    }
-
     .chart-container {
       display: block;
       max-width: 300px;
       margin-bottom: 40pt;
       page-break-inside: avoid;
-    }
-
-    .chart-canvas {
-      display: block;
-      overflow: visible;
     }
   }
 }
