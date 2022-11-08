@@ -5,18 +5,36 @@
       class="fa-solid"
       [icon]="faCircleInfo"
       placement="right"
-      data-bs-toggle="tooltip" title="Todos os itens marcados serão utilizados para gerar os critérios a serem avaliados."
+      data-bs-toggle="tooltip"
+      title="Todos os itens marcados serão utilizados para gerar os critérios a serem avaliados."
     ></fa-icon>
   </h4>
   <form action="submit" class="ml-2">
-    <div class="form-check" *ngFor="let reference of selectedReferences | keyvalue">
-      <input class="form-check-input"
+    <div
+      class="form-check"
+      *ngFor="let reference of selectedReferences | keyvalue"
+    >
+      <input
+        class="form-check-input"
         type="checkbox"
-        id="reference{{reference.value.id}}-checkbox"
+        id="reference{{ reference.value.id }}-checkbox"
         [checked]="reference.value.selected"
-        (change)="this.rulesService.toggleReference(reference.key, !reference.value.selected)"
+        (change)="
+          this.rulesService.toggleReference(
+            reference.key,
+            !reference.value.selected
+          )
+        "
+      />
+      <label
+        class="form-check-label"
+        for="reference{{ reference.value.id }}-checkbox"
       >
-      <label class="form-check-label" for="reference{{reference.value.id}}-checkbox">{{reference.value.name}}</label>
+        {{ reference.value.name }}
+        <a target="_blank" href="{{ reference.value.link }}">
+          <fa-icon class="fa-light" [icon]="faLink" placement="right"></fa-icon>
+        </a>
+      </label>
     </div>
   </form>
 </div>

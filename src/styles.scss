@@ -12,32 +12,4 @@
   #blip-chat-container {
     display: none !important;
   }
-
-  #pdf-container {
-    max-width: unset !important;
-    margin: 0 !important;
-
-    #page-break {
-      font-size: xx-small;
-      page-break-after: always;
-    }
-
-    #charts {
-      display: block;
-      page-break-after: always;
-    }
-
-    .valid-topic {
-      margin-bottom: 40pt;
-      width: 40%;
-    }
-
-    .topic-container {
-      margin-top: 30px;
-      overflow: visible;
-      page-break-before: always;
-      print-color-adjust: exact;
-      -webkit-print-color-adjust: exact;
-    }
-  }
 }

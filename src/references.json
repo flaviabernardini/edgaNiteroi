@@ -1,7 +1,7 @@
 [
-  {"id": 1, "name": "Guia de implantação de Portal da Transparência"},
-  {"id": 2, "name": "Guia de Requisitos e Boas Práticas para Construção de Portais de Transparência Municipais"},
-  {"id": 3, "name": "Acesso à Informação Pública: Uma introdução à Lei no 12.527, de 18 de novembro de 2011"},
-  {"id": 4, "name": "Mapa Brasil Transparente"},
-  {"id": 5, "name": "DECRETO Nº 10.540, DE 5 DE NOVEMBRO DE 2020"}
+  {"id": 1, "name": "Guia de implantação de Portal da Transparência", "link": "https://www.ufmg.br/proex/cpinfo/cidadania/wp-content/uploads/2014/04/CGU-2013-GUIA-implanta%C3%A7%C3%A3o-do-portal-da-transpar%C3%AAncia.pdf"},
+  {"id": 2, "name": "Guia de Requisitos e Boas Práticas para Construção de Portais de Transparência Municipais", "link": "https://secont.es.gov.br/Media/Secont/DOWNLOADS/Conselho%20de%20Transpar%C3%AAncia/guia_requisitos_e_boas_prticas_portal_transparencia_municipios%20(2).pdf"},
+  {"id": 3, "name": "Acesso à Informação Pública: Uma introdução à Lei no 12.527, de 18 de novembro de 2011", "link": "https://www.gov.br/acessoainformacao/pt-br/central-de-conteudo/publicacoes/arquivos/cartilhaacessoainformacao-1.pdf"},
+  {"id": 4, "name": "Mapa Brasil Transparente", "link": "https://mbt.cgu.gov.br/publico/home"},
+  {"id": 5, "name": "DECRETO Nº 10.540, DE 5 DE NOVEMBRO DE 2020", "link": "https://www.in.gov.br/en/web/dou/-/decreto-n-10.540-de-5-de-novembro-de-2020-286682565"}
 ]

@@ -35,10 +35,10 @@
   <div id="topics">
     <div *ngFor="let topic of rules; let topic_id = index" [ngClass]="{'d-none': isTopicDisabled(topic)}">
       <div class="topic-container" *ngIf="!isTopicDisabled(topic)">
-        <h3 class="text-center">
+        <h3 class="text-center my-3">
           {{ topic.topic }}
         </h3>
-        <div class="rating-container d-block ps-2 py-2 border border-2 border-dark">
+        <div class="rating-container d-block p-4 rounded border border-2 border-dark">
           <div *ngFor="let criteria of topic.criterias">
             <app-result-rating [topic]="topic" [criteria]="criteria"></app-result-rating>
           </div>

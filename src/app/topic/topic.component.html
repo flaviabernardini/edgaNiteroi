@@ -14,19 +14,23 @@
         </h2>
       </div>
       <div class="col col-3 px-0">
-        <div class="progress">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            [ngStyle]="{ 'width': (topicSize - topicRating[4])/topicSize | percent }"
-            aria-label="Taxa completude sobre #TODO"
-            attr.aria-valuenow="{{ topicRating[0] }}"
-            aria-valuemin="0"
-            attr.aria-valuemax="{{ topicSize }}"
-          >
-            {{ (topicSize - topicRating[4])/topicSize | percent }}
+        <ng-container *ngIf="isTopicDisabled(topic); then empty; else normal;"></ng-container>
+        <ng-template #empty></ng-template>
+        <ng-template #normal>
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              [ngStyle]="{ 'width': (topicSize - topicRating[4])/topicSize | percent }"
+              aria-label="Taxa completude sobre #TODO"
+              attr.aria-valuenow="{{ topicRating[0] }}"
+              aria-valuemin="0"
+              attr.aria-valuemax="{{ topicSize }}"
+            >
+              {{ (topicSize - topicRating[4])/topicSize | percent }}
+            </div>
           </div>
-        </div>
+        </ng-template>
       </div>
     </div>
   </button>

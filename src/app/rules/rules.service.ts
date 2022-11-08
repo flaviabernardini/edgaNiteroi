@@ -51,7 +51,11 @@ export class RulesService {
   clearRules() {
     this.fullRules = Rules as Topic[];
     this.rules = this.fullRules;
+    this.selectedReferences = new Map(
+      allReferences.map((item) => [item.id, { ...item, selected: true }])
+    );
     localStorage.removeItem('rules');
+    localStorage.removeItem('references');
   }
 
   setTopicRatingsSize(topic: Topic): void {

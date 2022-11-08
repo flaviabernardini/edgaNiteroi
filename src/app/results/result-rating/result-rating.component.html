@@ -1,32 +1,33 @@
-<div *ngFor="let criteria of topic.criterias">
-  <div class="criteria-container row" *ngIf="!isCriteriaDisabled(criteria)">
-    <div class="col col-3">
-      <h5 class="criteria-title">
-        {{ criteria.criteria_title }}
-      </h5>
-    </div>
-    <div class="col col-9">
-      <div *ngFor="let subcriteria of criteria.subcriterias">
-        <div
-          class="subcriteria-container mx-2 border-bottom border-2 border-dark"
-          *ngIf="!isSubcriteriaDisabled(subcriteria)"
-        >
-          <div class="mb-0 row">
-            <div class="col col-8">
-              <p class="subcriteria-title">
-                {{ subcriteria.subcriteria_title }}
-              </p>
-            </div>
-            <div class="col col-4">
-              <p
-                [ngClass]="ratingColors[subcriteria.rating ?? 4]"
-                class="
-                  text-white
-                "
-              >
-                {{ ratingLabels[subcriteria.rating ?? 4] }}
-              </p>
-            </div>
+<div class="criteria-container row" *ngIf="!isCriteriaDisabled(criteria)">
+  <div class="col col-3">
+    <h5 class="criteria-title">
+      {{ criteria.criteria_title }}
+    </h5>
+  </div>
+  <div class="col col-9">
+    <div *ngFor="let subcriteria of criteria.subcriterias">
+      <div
+        class="subcriteria-container mx-2 border-bottom border-2 border-dark"
+        *ngIf="!isSubcriteriaDisabled(subcriteria)"
+      >
+        <div class="mb-0 row">
+          <div class="col col-8">
+            <p class="subcriteria-title">
+              {{ subcriteria.subcriteria_title }}
+            </p>
+          </div>
+          <div class="col col-4">
+            <p
+              [ngClass]="[
+                ratingColors[subcriteria.rating ?? 4],
+                subcriteria.rating == 3 ? '': 'text-white'
+              ]"
+              class="
+                subcriteria-rating
+              "
+            >
+              {{ ratingLabels[subcriteria.rating ?? 4] }}
+            </p>
           </div>
         </div>
       </div>

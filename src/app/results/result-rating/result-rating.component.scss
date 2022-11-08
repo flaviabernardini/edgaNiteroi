@@ -18,3 +18,15 @@ p {
   overflow: visible;
   page-break-inside: avoid;
 }
+
+@media print {
+  .criteria-title {
+    font-size: 12pt;
+    // color: red;
+  }
+
+  .subcriteria-title,
+  .subcriteria-rating {
+    font-size: 10pt;
+  }
+}

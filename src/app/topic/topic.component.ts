@@ -1,3 +1,4 @@
+import { RulesService } from './../rules/rules.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 import { Topic } from '../models/rules.models';
@@ -13,9 +14,15 @@ export class TopicComponent implements OnInit {
   @Input() topicRating!: Array<number>;
   @Input() topicSize: number = 0;
 
-  constructor() { }
+  constructor(
+    private rulesService: RulesService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  isTopicDisabled(topic: Topic): boolean {
+    return this.rulesService.isTopicDisabled(topic);
   }
 
   // Chart
