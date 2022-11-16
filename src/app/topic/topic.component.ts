@@ -41,7 +41,7 @@ export class TopicComponent implements OnInit {
     "Não encontrei",
     "Encontrei facilmente",
     "Encontrei com dificuldade",
-    "Tive muita dificuldade ",
+    "Encontrei com muita dificuldade",
     "Não informado"
   ];
   public pieChartLegend = true;
