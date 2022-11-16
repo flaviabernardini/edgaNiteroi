@@ -1,52 +1,61 @@
-<div id="pdf-container" class="container">
-  <div id="charts">
-    <div *ngFor="let topic of rules" [ngClass]="isTopicDisabled(topic)? 'd-none' : 'valid-topic'">
-      <div class="chart-container" *ngIf="!isTopicDisabled(topic)">
-        <h5 class="text-center">
-          {{ topic.topic }}
-        </h5>
-        <div class="chart-canvas">
-          <canvas
-            baseChart
-            [type]="'pie'"
-            [datasets]="[{
-              data: topic.ratings,
-              backgroundColor: [
-              'rgb(220, 53, 69, 0.8)',
-              'rgb(13, 110, 253, 0.8)',
-              'rgb(25, 135, 84, 0.8)',
-              'rgb(255, 193, 7, 0.8)',
-              'rgb(108, 117, 125, 0.8)'
-              ]
-            }]"
-            [labels]="pieChartLabels"
-            [options]="pieChartOptions"
-            [plugins]="pieChartPlugins"
-            [legend]="pieChartLegend"
-          >
-          </canvas>
+<ng-container *ngIf="areReferencesDisabled(); then empty; else normal;"></ng-container>
+<ng-template #empty>
+  <div class="container">
+    <h2>Não há critérios para serem avaliados.</h2>
+  </div>
+</ng-template>
+<ng-template #normal>
+  <div id="pdf-container" class="container">
+    <div id="charts">
+      <div *ngFor="let topic of rules" [ngClass]="isTopicDisabled(topic)? 'd-none' : 'valid-topic'">
+        <div class="chart-container" *ngIf="!isTopicDisabled(topic)">
+          <h5 class="text-center">
+            {{ topic.topic }}
+          </h5>
+          <div class="chart-canvas">
+            <canvas
+              baseChart
+              [type]="'pie'"
+              [datasets]="[{
+                data: topic.ratings,
+                backgroundColor: [
+                'rgb(220, 53, 69, 0.8)',
+                'rgb(13, 110, 253, 0.8)',
+                'rgb(25, 135, 84, 0.8)',
+                'rgb(255, 193, 7, 0.8)',
+                'rgb(108, 117, 125, 0.8)'
+                ]
+              }]"
+              [labels]="pieChartLabels"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins"
+              [legend]="pieChartLegend"
+            >
+            </canvas>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- <p id="page-break">Results</p> -->
+    <!-- <p id="page-break">Results</p> -->
 
-  <div id="topics">
-    <div *ngFor="let topic of rules; let topic_id = index" [ngClass]="{'d-none': isTopicDisabled(topic)}">
-      <div class="topic-container" *ngIf="!isTopicDisabled(topic)">
-        <h3 class="text-center my-3">
-          {{ topic.topic }}
-        </h3>
-        <div class="rating-container d-block p-4 rounded border border-2 border-dark">
-          <div *ngFor="let criteria of topic.criterias">
-            <app-result-rating [topic]="topic" [criteria]="criteria"></app-result-rating>
+    <div id="topics">
+      <div *ngFor="let topic of rules; let topic_id = index" [ngClass]="{'d-none': isTopicDisabled(topic)}">
+        <div class="topic-container" *ngIf="!isTopicDisabled(topic)">
+          <h3 class="text-center my-3">
+            {{ topic.topic }}
+          </h3>
+          <div class="rating-container d-block p-4 rounded border border-2 border-dark">
+            <div *ngFor="let criteria of topic.criterias">
+              <app-result-rating [topic]="topic" [criteria]="criteria"></app-result-rating>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-<div class="print-button-container container my-3 mb-5">
-  <button type="button" class="btn btn-primary d-block m-auto" (click)="openPDF()">Imprimir</button>
-</div>
+  <div class="print-button-container container my-3 mb-5">
+    <button type="button" class="btn btn-primary d-block m-auto" (click)="openPDF()">Imprimir</button>
+  </div>
+</ng-template>

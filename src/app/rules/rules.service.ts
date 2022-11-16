@@ -144,6 +144,15 @@ export class RulesService {
   }
 
   //-------------------- VERIFY
+  areReferencesDisabled(): boolean {
+    for(const reference of this.selectedReferences) {
+      if(reference[1].selected == true) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   isSubcriteriaDisabled(subcriteria: SubCriteria): boolean {
     return subcriteria.references.every(
       (referenceId) =>

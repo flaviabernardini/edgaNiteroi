@@ -40,6 +40,10 @@ export class ResultsComponent implements OnInit {
     return this.rulesService.isTopicDisabled(topic);
   }
 
+  areReferencesDisabled(): boolean{
+    return this.rulesService.areReferencesDisabled()
+  }
+
   // Chart
   public pieChartOptions: ChartOptions<'pie'> = {
     responsive: true,
