@@ -19,14 +19,14 @@
           <div class="col col-4">
             <p
               [ngClass]="[
-                ratingColors[subcriteria.rating ?? 4],
+                ratingColors[subcriteria.rating ?? numOptions],
                 subcriteria.rating == 3 ? '': 'text-white'
               ]"
               class="
                 subcriteria-rating
               "
             >
-              {{ ratingLabels[subcriteria.rating ?? 4] }}
+              {{ ratingLabels[subcriteria.rating ?? numOptions] }}
             </p>
           </div>
         </div>

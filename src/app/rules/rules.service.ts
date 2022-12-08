@@ -2,6 +2,7 @@ import { Criteria, SelectedSubCriteria, SubCriteria } from './../models/rules.mo
 import { CriteriaReference } from './../models/criteria-reference.models';
 import Rules from 'src/rules.json';
 import allReferences from 'src/references.json';
+import { appConstants } from '../constants';
 import { Injectable } from '@angular/core';
 import { Topic } from '../models/rules.models';
 
@@ -64,7 +65,7 @@ export class RulesService {
     for (const criteria of topic.criterias) {
       for (const subcriteria of criteria.subcriterias) {
         if (!this.isSubcriteriaDisabled(subcriteria)) {
-          topic.ratings[subcriteria.rating ?? 4]++;
+          topic.ratings[subcriteria.rating ?? appConstants.numOptions]++;
           topic.size++;
         }
       }
@@ -114,7 +115,7 @@ export class RulesService {
     for (const criteria of topic.criterias) {
       for (const subcriteria of criteria.subcriterias) {
         if (!this.isSubcriteriaDisabled(subcriteria)) {
-          ratings[subcriteria.rating ?? 4]++;
+          ratings[subcriteria.rating ?? appConstants.numOptions]++;
         }
       }
     }
@@ -125,7 +126,7 @@ export class RulesService {
     let ratings = [0, 0, 0, 0, 0];
     for (const subcriteria of criteria.subcriterias) {
       if (!this.isSubcriteriaDisabled(subcriteria)) {
-        ratings[subcriteria.rating ?? 4]++;
+        ratings[subcriteria.rating ?? appConstants.numOptions]++;
       }
     }
     return ratings;

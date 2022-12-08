@@ -2,6 +2,7 @@ import { RulesService } from './../rules/rules.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 import { Topic } from '../models/rules.models';
+import { appConstants } from '../constants';
 
 @Component({
   selector: 'app-topic',
@@ -13,6 +14,7 @@ export class TopicComponent implements OnInit {
   @Input() topicId!: number;
   @Input() topicRating!: Array<number>;
   @Input() topicSize: number = 0;
+  numOptions = appConstants.numOptions;
 
   constructor(
     private rulesService: RulesService

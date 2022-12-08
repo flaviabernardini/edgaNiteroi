@@ -1,6 +1,7 @@
 import { RulesService } from './../../rules/rules.service';
 import { Topic, Criteria, SubCriteria } from './../../models/rules.models';
 import { Component, Input, OnInit } from '@angular/core';
+import { appConstants } from 'src/app/constants';
 
 @Component({
   selector: 'app-result-rating',
@@ -10,6 +11,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ResultRatingComponent implements OnInit {
   @Input() topic!: Topic;
   @Input() criteria!: Criteria;
+  numOptions = appConstants.numOptions;
 
   ratingLabels = [
     'Não encontrado',
