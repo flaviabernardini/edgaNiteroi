@@ -41,8 +41,10 @@ export class TopicListComponent implements OnInit {
   }
 
   clearForm() {
-    this.rulesService.clearRules();
-    this.rules = this.rulesService.rules;
+    if(window.confirm('Tem certeza que deseja limpar todo o formulário?')) {
+      this.rulesService.clearRules();
+      this.rules = this.rulesService.rules;
+    }
   }
 
   goTo(component: string) {

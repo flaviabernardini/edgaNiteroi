@@ -12,23 +12,33 @@
       attr.aria-controls="accordion{{ topicId }}-collapse{{ criteriaId }}"
     >
       Critério {{ criteriaId + 1 }}. {{ criteria.criteria_title }}
-      <ng-container *ngIf="calculateCriteriaRating(criteria)[4] == 0; then complete; else incomplete;"></ng-container>
+      <ng-container
+        *ngIf="
+          calculateCriteriaRating(criteria)[4] == 0;
+          then complete;
+          else incomplete
+        "
+      ></ng-container>
       <ng-template #complete>
         <fa-icon
-        class="fa-solid text-success fa-pull-right"
-        [icon]="faCheck"
-        size="xs"
-        [styles]="{ opacity: '0.8' }"
-        placement="right"
+          class="fa-solid text-success fa-pull-right"
+          data-bs-toggle="tooltip"
+          [icon]="faCheck"
+          placement="right"
+          size="xs"
+          [styles]="{ opacity: '0.8' }"
+          title="Todos os itens deste critério foram avaliados."
         ></fa-icon>
       </ng-template>
       <ng-template #incomplete>
         <fa-icon
-        class="fa-sharp fa-solid fa-pull-right"
-        [icon]="faTriangleExclamation"
-        size="xs"
-        [styles]="{ opacity: '0.8' }"
-        placement="right"
+          class="fa-sharp fa-solid fa-pull-right"
+          data-bs-toggle="tooltip"
+          [icon]="faTriangleExclamation"
+          placement="right"
+          size="xs"
+          [styles]="{ opacity: '0.8' }"
+          title="Ainda existem itens não avaliados neste critério!"
         ></fa-icon>
       </ng-template>
     </button>
