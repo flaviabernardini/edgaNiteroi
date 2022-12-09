@@ -10,7 +10,6 @@ import { Topic } from '../models/rules.models';
   providedIn: 'root',
 })
 export class RulesService {
-  //TODO salvar as Rules com alterações
   fullRules: Topic[] = localStorage.getItem('rules') == null?
     Rules as Topic[]
     :
